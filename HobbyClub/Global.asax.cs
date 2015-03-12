@@ -13,6 +13,8 @@ namespace HobbyClub
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+
         }
     }
 }
