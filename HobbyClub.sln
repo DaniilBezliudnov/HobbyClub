@@ -1,11 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub", "HobbyClub\HobbyClub.csproj", "{BBAB2575-9E73-4A45-8A06-DFD76FCEFA5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub.Tests", "HobbyClub.Tests\HobbyClub.Tests.csproj", "{4C851DE3-780B-4D2C-82F6-15FB0956EF8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub.Admin", "HobbyClub.Admin\HobbyClub.Admin.csproj", "{FE83799B-827C-44EF-AA55-3BF501373273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub.Data", "HobbyClub.Data\HobbyClub.Data.csproj", "{A3D3F1C7-976B-44C0-8568-9BBABA7C17CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub.Services", "HobbyClub.Services\HobbyClub.Services.csproj", "{58348FE5-A8E4-49B5-86B7-954F95B75D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyClub.Admin.Services", "HobbyClub.Admin.Services\HobbyClub.Admin.Services.csproj", "{CC7709C3-AA4C-488F-B396-BE899BD6E6BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{4C851DE3-780B-4D2C-82F6-15FB0956EF8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C851DE3-780B-4D2C-82F6-15FB0956EF8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C851DE3-780B-4D2C-82F6-15FB0956EF8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE83799B-827C-44EF-AA55-3BF501373273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE83799B-827C-44EF-AA55-3BF501373273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE83799B-827C-44EF-AA55-3BF501373273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE83799B-827C-44EF-AA55-3BF501373273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D3F1C7-976B-44C0-8568-9BBABA7C17CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D3F1C7-976B-44C0-8568-9BBABA7C17CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D3F1C7-976B-44C0-8568-9BBABA7C17CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D3F1C7-976B-44C0-8568-9BBABA7C17CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58348FE5-A8E4-49B5-86B7-954F95B75D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58348FE5-A8E4-49B5-86B7-954F95B75D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58348FE5-A8E4-49B5-86B7-954F95B75D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58348FE5-A8E4-49B5-86B7-954F95B75D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC7709C3-AA4C-488F-B396-BE899BD6E6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7709C3-AA4C-488F-B396-BE899BD6E6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7709C3-AA4C-488F-B396-BE899BD6E6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7709C3-AA4C-488F-B396-BE899BD6E6BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
