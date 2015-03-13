@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(HobbyClub.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(HobbyClub.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(HobbyClub.Web.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(HobbyClub.Web.App_Start.NinjectWebCommon), "Stop")]
 
-namespace HobbyClub.App_Start
+namespace HobbyClub.Web.App_Start
 {
     using System;
     using System.Web;
