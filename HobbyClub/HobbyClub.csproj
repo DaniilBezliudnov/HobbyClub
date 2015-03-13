@@ -102,8 +102,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Authentication\" />
     <Folder Include="Controllers\" />
+    <Folder Include="css\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Infrastructure\" />
+    <Folder Include="js\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HobbyClub.Data\HobbyClub.Data.csproj">
