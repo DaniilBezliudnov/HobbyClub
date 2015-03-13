@@ -105,6 +105,16 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HobbyClub.Data\HobbyClub.Data.csproj">
+      <Project>{a3d3f1c7-976b-44c0-8568-9bbaba7c17cb}</Project>
+      <Name>HobbyClub.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HobbyClub.Services\HobbyClub.Services.csproj">
+      <Project>{58348fe5-a8e4-49b5-86b7-954f95b75d26}</Project>
+      <Name>HobbyClub.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

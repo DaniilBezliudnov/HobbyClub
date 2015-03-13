@@ -52,6 +52,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HobbyClub.Admin.Services\HobbyClub.Admin.Services.csproj">
+      <Project>{cc7709c3-aa4c-488f-b396-be899bd6e6be}</Project>
+      <Name>HobbyClub.Admin.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HobbyClub.Admin\HobbyClub.Admin.csproj">
+      <Project>{fe83799b-827c-44ef-aa55-3bf501373273}</Project>
+      <Name>HobbyClub.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HobbyClub.Data\HobbyClub.Data.csproj">
+      <Project>{a3d3f1c7-976b-44c0-8568-9bbaba7c17cb}</Project>
+      <Name>HobbyClub.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HobbyClub.Services\HobbyClub.Services.csproj">
+      <Project>{58348fe5-a8e4-49b5-86b7-954f95b75d26}</Project>
+      <Name>HobbyClub.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HobbyClub\HobbyClub.csproj">
       <Project>{BBAB2575-9E73-4A45-8A06-DFD76FCEFA5F}</Project>
       <Name>HobbyClub</Name>
