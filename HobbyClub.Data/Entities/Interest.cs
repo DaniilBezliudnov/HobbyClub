@@ -9,7 +9,7 @@ namespace HobbyClub.Data.Entities
     class Interest
     {
         public UInt32 InterestId { get; set; }
-        public virtual UInt32 LogoId { get; set; }
+        public virtual Photo LogoId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

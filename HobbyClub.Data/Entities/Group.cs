@@ -12,6 +12,6 @@ namespace HobbyClub.Data.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreationDate { get; set; }
-        public virtual UInt32 LogoID { get; set; }
+        public virtual Photo LogoID { get; set; }
     }
 }

@@ -52,7 +52,9 @@
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Interest.cs" />
+    <Compile Include="Entities\Photo.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

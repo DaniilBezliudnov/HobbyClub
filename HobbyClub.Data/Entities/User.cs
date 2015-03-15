@@ -15,7 +15,7 @@ namespace HobbyClub.Data.Entities
         public string Phone { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public virtual UInt32 PhotoID { get; set; }
+        public virtual Photo Photo { get; set; }
         public DateTime CreationDate { get; set; }
     }
 }
