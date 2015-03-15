@@ -7,7 +7,9 @@ namespace HobbyClub.Data.Entities
 {
     class Photo
     {
-        public UInt32 PhotoID { get; set; }
+        public UInt32 PhotoId { get; set; }
         public string Value { get; set; }
+
+
     }
 }
