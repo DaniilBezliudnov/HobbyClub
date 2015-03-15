@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Configuration\UserEntityConfig.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Interest.cs" />
@@ -57,7 +58,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="Fake\" />
     <Folder Include="Infrastructure\" />
   </ItemGroup>
