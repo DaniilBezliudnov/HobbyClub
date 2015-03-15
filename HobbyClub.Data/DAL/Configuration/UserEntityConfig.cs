@@ -19,6 +19,8 @@ namespace HobbyClub.Data.DAL.Configuration
             this.Property(p => p.Name).IsRequired();
             this.Property(p => p.Surname).IsRequired();
             this.Property(p => p.Mail).IsRequired();
+            this.HasOptional(p => p.Photo)
+                .WithRequired(u => u.User);
             this.HasMany<Event>(e => e.Events)
                 .WithMany(u => u.Users)
                 .Map(us =>
