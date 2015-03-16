@@ -12,5 +12,7 @@ namespace HobbyClub.Web.Controllers
 		{
 			return View();
 		}
+
+        
 	}
 }
