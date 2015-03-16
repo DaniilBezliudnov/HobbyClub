@@ -49,12 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fake\Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
     <Folder Include="Entities\" />
-    <Folder Include="Fake\" />
     <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
