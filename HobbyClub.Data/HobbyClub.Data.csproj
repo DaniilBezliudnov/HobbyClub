@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\EntityDataBaseFactory.cs" />
     <Compile Include="Infrastructure\Configuration\EventEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\GroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\InterestEntityConfig.cs" />
