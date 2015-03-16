@@ -34,6 +34,22 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -46,9 +62,12 @@
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.6\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +76,7 @@
       <Name>HobbyClub.Admin.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\HobbyClub.Admin\HobbyClub.Admin.csproj">
-      <Project>{fe83799b-827c-44ef-aa55-3bf501373273}</Project>
+      <Project>{aa1ae86b-1a6c-4684-b216-fb583c4d450b}</Project>
       <Name>HobbyClub.Admin</Name>
     </ProjectReference>
     <ProjectReference Include="..\HobbyClub.Data\HobbyClub.Data.csproj">
@@ -68,9 +87,9 @@
       <Project>{58348fe5-a8e4-49b5-86b7-954f95b75d26}</Project>
       <Name>HobbyClub.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HobbyClub\HobbyClub.csproj">
-      <Project>{BBAB2575-9E73-4A45-8A06-DFD76FCEFA5F}</Project>
-      <Name>HobbyClub</Name>
+    <ProjectReference Include="..\HobbyClub.Web\HobbyClub.Web.csproj">
+      <Project>{f3ef591a-265e-4e22-bdbd-3bb6817077b6}</Project>
+      <Name>HobbyClub.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +97,13 @@
     <Folder Include="Data\" />
     <Folder Include="Services\" />
     <Folder Include="Web\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
