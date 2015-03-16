@@ -90,6 +90,8 @@
   <ItemGroup>
     <Folder Include="DAL\" />
     <Folder Include="Fake\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
