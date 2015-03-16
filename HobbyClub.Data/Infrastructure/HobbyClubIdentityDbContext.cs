@@ -6,7 +6,7 @@ namespace HobbyClub.Data.Infrastructure
 {
     public class HobbyClubIdentityDbContext : IdentityDbContext<AppUser>
     {
-        public HobbyClubIdentityDbContext() : base("HobbyClub") { }
+        public HobbyClubIdentityDbContext() : base("HobbyClubConnection") { }
         static HobbyClubIdentityDbContext()
         {
             Database.SetInitializer<HobbyClubIdentityDbContext>(new IdentityDbInit());
@@ -21,12 +21,12 @@ namespace HobbyClub.Data.Infrastructure
     }
     //public class IdentityDbInit : DropCreateDatabaseIfModelChanges<HobbyClubIdentityDbContext>
     //{
-    //    protected override void Seed(AppIdentityDbContext context)
+    //    protected override void Seed(HobbyClubIdentityDbContext context)
     //    {
     //        PerformInitialSetup(context);
     //        base.Seed(context);
     //    }
-    //    public void PerformInitialSetup(AppIdentityDbContext context)
+    //    public void PerformInitialSetup(HobbyClubIdentityDbContext context)
     //    {
     //        AppUserManager userMgr = new AppUserManager(new UserStore<AppUser>(context));
     //        AppRoleManager roleMgr = new AppRoleManager(new RoleStore<AppRole>(context));
