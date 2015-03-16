@@ -4,10 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HobbyClub.Data.DAL.Configuration;
+using HobbyClub.Data.Infrastructure.Configuration;
 using HobbyClub.Data.Entities;
 
-namespace HobbyClub.Data.DAL.Context
+namespace HobbyClub.Data.Infrastructure.Context
 {
     class HobbyClubContext : DbContext
     {

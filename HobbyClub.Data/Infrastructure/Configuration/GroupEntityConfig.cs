@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
 using HobbyClub.Data.Entities;
 
-namespace HobbyClub.Data.DAL.Configuration
+namespace HobbyClub.Data.Infrastructure.Configuration
 {
     class GroupEntityConfig : EntityTypeConfiguration<Group>
     {
