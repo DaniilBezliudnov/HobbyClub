@@ -15,5 +15,6 @@ namespace HobbyClub.Data.Entities
         public virtual Photo LogoID { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
         public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

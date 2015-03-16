@@ -19,6 +19,7 @@ namespace HobbyClub.Data.DAL.Configuration
             this.HasOptional(p => p.Users);
             this.HasOptional(p => p.LogoID)
                 .WithRequired(g => g.Group);
+            this.HasOptional(g => g.Events);
         }
     }
 }

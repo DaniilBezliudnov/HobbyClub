@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Configuration\EventEntityConfig.cs" />
     <Compile Include="DAL\Configuration\GroupEntityConfig.cs" />
     <Compile Include="DAL\Configuration\InterestEntityConfig.cs" />
     <Compile Include="DAL\Configuration\PhotoEntityConfig.cs" />

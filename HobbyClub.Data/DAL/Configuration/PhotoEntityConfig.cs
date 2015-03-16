@@ -12,6 +12,7 @@ namespace HobbyClub.Data.DAL.Configuration
     {
         public PhotoEntityConfig()
         {
+            this.ToTable("Photo");
             this.HasKey(p => p.PhotoId);
             this.Property(p => p.Value).IsRequired();
         }
