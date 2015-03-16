@@ -60,11 +60,13 @@
     <Compile Include="Entities\Interest.cs" />
     <Compile Include="Entities\Photo.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Infrastructure\BaseRepository.cs" />
+    <Compile Include="Infrastructure\IDataBaseFactory.cs" />
+    <Compile Include="Infrastructure\IDataBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fake\" />
-    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
