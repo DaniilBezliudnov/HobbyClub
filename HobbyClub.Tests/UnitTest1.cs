@@ -9,6 +9,7 @@ namespace HobbyClub.Tests
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
