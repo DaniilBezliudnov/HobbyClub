@@ -19,17 +19,18 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Property(p=>p.CreationDate)
                 .HasColumnType("datetime2")
                 .IsRequired();
-            this.HasOptional<User>(u => u.CreatorID)
+            this.HasRequired<Group>(g => g.Group)
                 .WithMany(e => e.Events)
                 .HasForeignKey(e => e.EventID);
-            this.HasOptional<Group>(g => g.Group)
-                .WithMany(e => e.Events)
-                .HasForeignKey(e => e.EventID);
-            this.HasOptional<Interest>(i => i.Interest)
+            //this.HasRequired<AppUser>(u => u.CreatorID)
+            //    .WithMany(e => e.Events)
+            //    .HasForeignKey(e => e.EventID);
+            this.HasRequired<Interest>(i => i.Interest)
                 .WithMany(e => e.Events)
                 .HasForeignKey(e => e.EventID);
             this.HasOptional(p => p.LogoID)
                 .WithRequired(g => g.Event);
+
         }
     }
 }

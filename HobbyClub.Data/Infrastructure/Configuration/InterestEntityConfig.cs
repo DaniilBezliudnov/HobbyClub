@@ -13,7 +13,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         public InterestEntityConfig()
         {
             this.ToTable("Interest");
-            this.HasKey<UInt32>(i => i.InterestId);
+            this.HasKey<Guid>(i => i.InterestId);
             this.Property(p => p.Name).IsRequired()
                 .HasMaxLength(300);
             this.Property(p => p.Description).IsRequired();

@@ -1,18 +1,16 @@
 ﻿using System;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace HobbyClub.Data.Entities
 {
-   public class User
+    //public enum Cities
+    //{
+    //    LONDON, PARIS, CHICAGO
+    //}
+    public class AppUser : IdentityUser
     {
-        public UInt32 UserId { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Mail { get; set; }
-        public string Phone { get; set; }
+       // public Cities City { get; set; }
+        public string SecondName { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
         public DateTime CreationDate { get; set; }

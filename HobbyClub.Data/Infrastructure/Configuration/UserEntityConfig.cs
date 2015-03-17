@@ -8,19 +8,20 @@ using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Data.Infrastructure.Configuration
 {
-    class UserEntityConfig : EntityTypeConfiguration<User>
+    class UserEntityConfig : EntityTypeConfiguration<AppUser>
     {
         public UserEntityConfig()
         {
             this.ToTable("User");
-            this.HasKey<UInt32>(u => u.UserId);
+            this.HasKey(u => u.Id);
             this.Property(p => p.CreationDate)
                 .HasColumnType("datetime2");
-            this.Property(p => p.Name).IsRequired();
-            this.Property(p => p.Surname).IsRequired();
-            this.Property(p => p.Mail).IsRequired();
+            this.Property(p => p.UserName).IsRequired();
+            this.Property(p => p.SecondName).IsRequired();
+            this.Property(p => p.Email).IsRequired();
             this.HasOptional(p => p.Photo)
                 .WithRequired(u => u.User);
+
             this.HasMany<Event>(e => e.Events)
                 .WithMany(u => u.Users)
                 .Map(us =>
