@@ -1,3 +1,12 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@using System.Web.Security;
+@{
+    if (true)//User.Identity.IsAuthenticated добавить проверку на роль пользователя
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_LayoutForNonAuthorized.cshtml";
+    }
+
 }

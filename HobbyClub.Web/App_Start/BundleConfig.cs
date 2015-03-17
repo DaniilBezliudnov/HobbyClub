@@ -8,25 +8,22 @@ namespace HobbyClub.Web
 		// For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
 		public static void RegisterBundles(BundleCollection bundles)
 		{
-			bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-						"~/Scripts/jquery.js"));
+			bundles.Add(new ScriptBundle("~/bundles/libraries/jquery").Include(
+                        "~/Scripts/libraries/jquery-{version}.js"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-            //            "~/Scripts/jquery.validate*"));
+ 			bundles.Add(new ScriptBundle("~/bundles/libraries/bootstrap").Include(
+                      "~/Scripts/libraries/bootstrap.min.js",
+                      "~/Scripts/libraries/respond.min.js"));
 
-			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-					  "~/Scripts/bootstrap.min.js",
-					  "~/Scripts/respond.min.js"));
-            bundles.Add(new ScriptBundle("~/bundles/mainPage").Include(
-                      
-                      "~/Scripts/owl.carousel.min.js",
-                      "~/Scripts/mousescroll.js",
-                      "~/Scripts/smoothscroll.js",
-                      "~/Scripts/jquery.prettyPhoto.js",
-                      "~/Scripts/jquery.isotope.min.js",
-                       "~/Scripts/jquery.inview.min.js",
-                       "~/Scripts/wow.min.js",
-                       "~/Scripts/main.js"
+            bundles.Add(new ScriptBundle("~/bundles/libraries/mainPage").Include(
+                      "~/Scripts/libraries/owl.carousel.min.js",
+                      "~/Scripts/libraries/mousescroll.js",
+                      "~/Scripts/libraries/smoothscroll.js",
+                      "~/Scripts/libraries/jquery.prettyPhoto.js",
+                      "~/Scripts/libraries/jquery.isotope.min.js",
+                       "~/Scripts/libraries/jquery.inview.min.js",
+                       "~/Scripts/libraries/wow.min.js",
+                       "~/Scripts/libraries/main.js"
                       ));
 
 

@@ -251,18 +251,18 @@
     <Content Include="Content\Images\testimonial\01.jpg" />
     <Content Include="Content\Images\testimonial\bg.jpg" />
     <Content Include="Content\Images\work-process\bg.jpg" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\html5shiv.js" />
-    <Content Include="Scripts\jquery.inview.min.js" />
-    <Content Include="Scripts\jquery.isotope.min.js" />
-    <Content Include="Scripts\jquery.js" />
-    <Content Include="Scripts\jquery.prettyPhoto.js" />
-    <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\mousescroll.js" />
-    <Content Include="Scripts\owl.carousel.min.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\smoothscroll.js" />
-    <Content Include="Scripts\wow.min.js" />
+    <Content Include="Scripts\libraries\angular.js" />
+    <Content Include="Scripts\libraries\bootstrap.min.js" />
+    <Content Include="Scripts\libraries\html5shiv.js" />
+    <Content Include="Scripts\libraries\jquery.inview.min.js" />
+    <Content Include="Scripts\libraries\jquery.isotope.min.js" />
+    <Content Include="Scripts\libraries\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\libraries\main.js" />
+    <Content Include="Scripts\libraries\mousescroll.js" />
+    <Content Include="Scripts\libraries\owl.carousel.min.js" />
+    <Content Include="Scripts\libraries\respond.min.js" />
+    <Content Include="Scripts\libraries\smoothscroll.js" />
+    <Content Include="Scripts\libraries\wow.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -273,12 +273,12 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Authentication\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="Scripts\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -294,10 +294,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HobbyClub.Data\HobbyClub.Data.csproj">
@@ -317,6 +317,24 @@
     <Content Include="Views\RoleAdmin\Create.cshtml" />
     <Content Include="Views\RoleAdmin\Edit.cshtml" />
     <Content Include="Views\RoleAdmin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Home.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\libraries\jquery-v1.11.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Groups.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Events.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Interests.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutForNonAuthorized.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
