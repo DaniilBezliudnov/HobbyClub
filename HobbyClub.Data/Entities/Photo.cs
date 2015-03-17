@@ -5,9 +5,9 @@ using System.Text;
 
 namespace HobbyClub.Data.Entities
 {
-    class Photo
+    public class Photo
     {
-        public UInt32 PhotoId { get; set; }
+        public Guid PhotoId { get; set; }
         public string Value { get; set; }
         public virtual User User { get; set; }
         public virtual Interest Interest { get; set; }
