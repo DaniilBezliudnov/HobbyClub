@@ -1,36 +1,93 @@
-@keyframes MyHide {
-    from {
-        background: red;
-        height : 100%;
-    }
-
-    to {
-        background: yellow;
-        height : 1%;
-    }
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-@-moz-keyframes MyHide {
-    from {
-        background: blue;
-    }
-
-    to {
-        background: yellow;
-    }
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes MyHide {
-    from {
-        background: green;
-        max-height : 200px;
-    }
-
-    to {
-        background: yellow;
-        max-height : 1px;
-    }
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    height : 20px;
+  }
+
+  100% {
+    opacity: 0;
+    height : 0px;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    height : 20px;
+  }
+
+  100% {
+    opacity: 0;
+    height : 0px;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    height : 0px;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    height : 20px;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    height : 0px;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    height : 20px;
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
 
 .tree {
     /*min-height:20px;*/
@@ -46,17 +103,12 @@
     -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
     -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
     box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
-    
-    /*animation-duration : 2s;
-    animation-name : MyHide;
-    -webkit-animation-duration : 2s;
-    -webkit-animation-name : MyHide;*/
 }
 .tree li {
     list-style-type:none;
     margin:0 0 0 5px;
     padding:-5px;
-    position:relative
+    position:relative;
 }
 .tree li span {
     -moz-border-radius:5px;
@@ -66,10 +118,11 @@
     border-radius:5px;
     display:inline-block;
     padding:3px 8px;
-    text-decoration:none
+    height : 20px;
+    text-decoration:none;
 }
 .tree li.parent_li>span {
-    cursor:pointer
+    cursor:pointer;
 }
 .tree a{
 	text-decoration: none;

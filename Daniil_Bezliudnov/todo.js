@@ -67,11 +67,11 @@ angular.module("mainApp", ["addModule", "ngSanitize"])
 		]};
 	
 	$scope.hideInner = function(name){
-		var hideClass = document.querySelector("ul#" + name + " ul").getAttribute("class");
-		var forHide = document.querySelectorAll("ul#" + name + ">li>ul");
+		var hideClass = document.querySelector("ul#" + name + " li ul li").getAttribute("class");
+		var forHide = document.querySelectorAll("ul#" + name + ">li>ul>li");
 		for  (var i = 0; i < forHide.length; ++i)
 		{
-		    forHide[i].setAttribute("class", hideClass == "animated fadeOut" ? "animated fadeIn" : "animated fadeOut");
+		    forHide[i].setAttribute("class", (hideClass == "animated fadeInDown" || hideClass == "animated") ? "animated fadeOutDown" : "animated fadeInDown");
 		    //forHide[i].fadeIn();
 		}
 	};
@@ -81,13 +81,13 @@ angular.module("mainApp", ["addModule", "ngSanitize"])
 		if(!root || !angular.isNumber(level)) return "";
 		
 		//start ul
-		var resStr = '<ul class="animated fadeIn"';
+		var resStr = '<ul ';
 		//add classes
 		resStr += "id = \"objectId"+ root.name +"\""
 		resStr += ">"
 		
 		//start li
-		resStr += '<li><span><a href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
+		resStr += '<li class="animated"><span ><a href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
 		if(root.childrens)
 		{
 			var addStr = "";
