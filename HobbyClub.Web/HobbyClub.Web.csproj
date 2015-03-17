@@ -251,6 +251,7 @@
     <Content Include="Content\Images\testimonial\01.jpg" />
     <Content Include="Content\Images\testimonial\bg.jpg" />
     <Content Include="Content\Images\work-process\bg.jpg" />
+    <Content Include="Scripts\app\layout.js" />
     <Content Include="Scripts\libraries\angular.js" />
     <Content Include="Scripts\libraries\bootstrap.min.js" />
     <Content Include="Scripts\libraries\html5shiv.js" />

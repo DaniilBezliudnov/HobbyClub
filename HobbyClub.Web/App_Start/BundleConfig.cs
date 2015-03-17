@@ -25,7 +25,9 @@ namespace HobbyClub.Web
                        "~/Scripts/libraries/wow.min.js",
                        "~/Scripts/libraries/main.js"
                       ));
-
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                  "~/Scripts/app/layout.js"
+                     ));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/Css/bootstrap.min.css",
