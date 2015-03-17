@@ -67,13 +67,27 @@ angular.module("mainApp", ["addModule", "ngSanitize"])
 		]};
 	
 	$scope.hideInner = function(name){
-		var hideClass = document.querySelector("ul#" + name + " li ul li").getAttribute("class");
-		var forHide = document.querySelectorAll("ul#" + name + ">li>ul>li");
+		var hideClass = document.querySelector("ul#" + name + " li ul li span").getAttribute("class");
+		var forHide = document.querySelectorAll(
+            "ul#" + name + " li ul li span" + //span
+            ", ul#" + name + " li ul li a" //a
+             + ", ul#" + name + " li ul li" //li
+            );
 		for  (var i = 0; i < forHide.length; ++i)
 		{
 		    forHide[i].setAttribute("class", (hideClass == "animated fadeInDown" || hideClass == "animated") ? "animated fadeOutDown" : "animated fadeInDown");
 		    //forHide[i].fadeIn();
 		}
+
+		//var forHide = document.querySelectorAll(
+        //    //"ul#" + name + " li ul li span" + //span
+        //    //", ul#" + name + " li ul li a" + //a
+        //    "ul#" + name + " li ul li" //li
+        //    );
+		//for (var i = 0; i < forHide.length; ++i) {
+		//    forHide[i].setAttribute("class", (hideClass == "animated fadeInDownNH" || hideClass == "animated") ? "animated fadeOutDownNH" : "animated fadeInDownNH");
+		//    //forHide[i].fadeIn();
+		//}
 	};
 	
 	//юзаем хтмл + потом меняем классы
@@ -87,7 +101,7 @@ angular.module("mainApp", ["addModule", "ngSanitize"])
 		resStr += ">"
 		
 		//start li
-		resStr += '<li class="animated"><span ><a href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
+		resStr += '<li class="animated"><span class="animated"><a class="animated" href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
 		if(root.childrens)
 		{
 			var addStr = "";
