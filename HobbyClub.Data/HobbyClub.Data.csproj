@@ -64,7 +64,6 @@
     <Compile Include="Concrete\BaseRepository.cs" />
     <Compile Include="Abstract\IDataBaseFactory.cs" />
     <Compile Include="Abstract\IDataBaseRepository.cs" />
-    <Compile Include="Infrastructure\Manager\BaseManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
