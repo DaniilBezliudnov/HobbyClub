@@ -19,14 +19,14 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Property(p => p.Description).IsRequired();
             this.HasOptional(p => p.LogoId)
                 .WithRequired(i => i.Interest);
-            this.HasMany<Group>(e => e.Groups)
-                .WithMany(gr => gr.Interests)
-                .Map(ig =>
-                {
-                    ig.MapLeftKey("InterestRefId");
-                    ig.MapRightKey("GroupRefId");
-                    ig.ToTable("InterestGroup");
-                });
+            //this.HasMany<Group>(e => e.Groups)
+            //    .WithMany(gr => gr.Interests)
+            //    .Map(ig =>
+            //    {
+            //        ig.MapLeftKey("InterestRefId");
+            //        ig.MapRightKey("GroupRefId");
+            //        ig.ToTable("InterestGroup");
+            //    });
         }
     }
 }

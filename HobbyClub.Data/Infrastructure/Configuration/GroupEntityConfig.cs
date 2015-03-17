@@ -16,13 +16,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.HasKey<Guid>(gr => gr.GroupId);
             this.Property(p => p.Name).IsRequired();
             this.Property(p => p.Description).IsRequired();
-            this.HasOptional(p => p.Users);
-            this.HasOptional(p => p.LogoID)
-                .WithRequired(g => g.Group);
-           
-            this.HasMany(e => e.Events)
-                .WithRequired(g => g.Group)
-                .HasForeignKey(k => k.EventID);
+            //this.HasOptional(p => p.Users);
+            //this.HasOptional(p => p.LogoID)
+                //.WithRequired(g => g.Group);
         }
     }
 }

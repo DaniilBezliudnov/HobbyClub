@@ -13,7 +13,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         public EventEntityConfig()
         {
             this.ToTable("Event");
-            this.HasKey(p=>p.EventID);
+            this.HasKey<Guid>(p=>p.EventID);
             this.Property(p=>p.Name).IsRequired();
             this.Property(p=>p.Description).IsRequired();
             this.Property(p=>p.CreationDate)
@@ -25,11 +25,11 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             //this.HasRequired<AppUser>(u => u.CreatorID)
             //    .WithMany(e => e.Events)
             //    .HasForeignKey(e => e.EventID);
-            this.HasRequired<Interest>(i => i.Interest)
-                .WithMany(e => e.Events)
-                .HasForeignKey(e => e.EventID);
-            this.HasOptional(p => p.LogoID)
-                .WithRequired(g => g.Event);
+            //this.HasRequired<Interest>(i => i.Interest)
+            //    .WithMany(e => e.Events)
+            //    .HasForeignKey(e => e.EventID);
+            //this.HasOptional(p => p.LogoID)
+            //    .WithRequired(g => g.Event);
 
         }
     }

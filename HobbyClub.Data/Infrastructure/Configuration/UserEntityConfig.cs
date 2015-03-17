@@ -19,33 +19,33 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Property(p => p.UserName).IsRequired();
             this.Property(p => p.SecondName).IsRequired();
             this.Property(p => p.Email).IsRequired();
-            this.HasOptional(p => p.Photo)
-                .WithRequired(u => u.User);
+           // this.HasOptional(p => p.Photo)
+           //     .WithRequired(u => u.User);
 
-            this.HasMany<Event>(e => e.Events)
-                .WithMany(u => u.Users)
-                .Map(us =>
-                    {
-                        us.MapLeftKey("UserRefId");
-                        us.MapRightKey("EventRefId");
-                        us.ToTable("UserEvent");
-                    });
-            this.HasMany<Group>(e => e.Groups)
-                .WithMany(u => u.Users)
-                .Map(us =>
-                    {
-                        us.MapLeftKey("UserRefId");
-                        us.MapRightKey("GroupRefId");
-                        us.ToTable("UserGroup");
-                    });
-           this.HasMany<Interest>(e => e.Interests)
-                .WithMany(u => u.Users)
-                .Map(us =>
-                {
-                    us.MapLeftKey("UserRefId");
-                    us.MapRightKey("InterestRefId");
-                    us.ToTable("UserInterest");
-                });
+           // this.HasMany<Event>(e => e.Events)
+           //     .WithMany(u => u.Users)
+           //     .Map(us =>
+           //         {
+           //             us.MapLeftKey("UserRefId");
+           //             us.MapRightKey("EventRefId");
+           //             us.ToTable("UserEvent");
+           //         });
+           // this.HasMany<Group>(e => e.Groups)
+           //     .WithMany(u => u.Users)
+           //     .Map(us =>
+           //         {
+           //             us.MapLeftKey("UserRefId");
+           //             us.MapRightKey("GroupRefId");
+           //             us.ToTable("UserGroup");
+           //         });
+           //this.HasMany<Interest>(e => e.Interests)
+           //     .WithMany(u => u.Users)
+           //     .Map(us =>
+           //     {
+           //         us.MapLeftKey("UserRefId");
+           //         us.MapRightKey("InterestRefId");
+           //         us.ToTable("UserInterest");
+           //     });
         }
     }
 }

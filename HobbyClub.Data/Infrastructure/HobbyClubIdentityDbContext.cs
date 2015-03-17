@@ -28,8 +28,8 @@ namespace HobbyClub.Data.Infrastructure
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Group> Groups { get; set; }
-        public DbSet<Interest> Interests { get; set; }
-        public DbSet<Photo> Photos { get; set; }
+        //public DbSet<Interest> Interests { get; set; }
+        //public DbSet<Photo> Photos { get; set; }
     }
 
     //public class IdentityDbInit : NullDatabaseInitializer<HobbyClubIdentityDbContext>
