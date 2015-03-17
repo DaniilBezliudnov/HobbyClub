@@ -278,7 +278,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Authentication\" />
     <Folder Include="Infrastructure\" />
-    <Folder Include="Scripts\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
