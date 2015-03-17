@@ -26,11 +26,11 @@ namespace HobbyClub.Data.Infrastructure.Context
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Configurations.Add(new EventEntityConfig());
-            modelBuilder.Configurations.Add(new GroupEntityConfig());
-            modelBuilder.Configurations.Add(new InterestEntityConfig());
-            modelBuilder.Configurations.Add(new PhotoEntityConfig());
-            modelBuilder.Configurations.Add(new UserEntityConfig());
+            //modelBuilder.Configurations.Add(new EventEntityConfig());
+            //modelBuilder.Configurations.Add(new GroupEntityConfig());
+            //modelBuilder.Configurations.Add(new InterestEntityConfig());
+            //modelBuilder.Configurations.Add(new PhotoEntityConfig());
+            //modelBuilder.Configurations.Add(new IdentityUserEntityConfig());
         }
 
         public DbSet<Event> Events { get; set; }

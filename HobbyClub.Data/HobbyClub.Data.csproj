@@ -90,7 +90,7 @@
     <Compile Include="Infrastructure\Configuration\GroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\InterestEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\PhotoEntityConfig.cs" />
-    <Compile Include="Infrastructure\Configuration\UserEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\IdentityUserEntityConfig.cs" />
     <Compile Include="Infrastructure\Context\HobbyClubContext.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Group.cs" />
