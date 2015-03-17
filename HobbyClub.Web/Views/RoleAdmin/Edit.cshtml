@@ -1,7 +1,10 @@
 ﻿@using HobbyClub.Web.Models
 @using HobbyClub.Data.Entities
 @model RoleEditModel
-@{ ViewBag.Title = "Edit Role";}
+@{ 
+    ViewBag.Title = "Edit Role";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+ }
 @Html.ValidationSummary()
 @using (Html.BeginForm()) 
 {

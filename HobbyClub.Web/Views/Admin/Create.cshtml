@@ -1,5 +1,8 @@
 ﻿@model HobbyClub.Web.Models.CreateModel
-@{ ViewBag.Title = "Create User";}
+@{
+    ViewBag.Title = "Create User";
+    Layout = "~/Views/Shared/_Layout - Admin.cshtml";
+}
 <h2>Create User</h2>
 @Html.ValidationSummary(false)
 @using (Html.BeginForm()) {
