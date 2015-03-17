@@ -9,7 +9,7 @@ namespace HobbyClub.Web
 		public static void RegisterBundles(BundleCollection bundles)
 		{
 			bundles.Add(new ScriptBundle("~/bundles/libraries/jquery").Include(
-                        "~/Scripts/libraries/jquery-{version}.js"));
+                        "~/Scripts/libraries/jquery.js"));
 
  			bundles.Add(new ScriptBundle("~/bundles/libraries/bootstrap").Include(
                       "~/Scripts/libraries/bootstrap.min.js",
