@@ -9,16 +9,18 @@ using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Data.Infrastructure.Context
 {
-    class HobbyClubContext : DbContext
+    public class HobbyClubContext : DbContext
     {
-        public HobbyClubContext():this("dbContext")
+        public HobbyClubContext()
+            : this("HobbyClubConnection")
+
         {
 
         }
         public HobbyClubContext(string connString)
             : base(connString)
         {
-
+            
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

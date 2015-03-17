@@ -8,20 +8,16 @@ namespace HobbyClub.Data.Entities
 {
     public class Event
     {
-        public Guid EventID { get; set; }
+        public Guid EventId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public EventType EventType  { get; set; }
+        public EventType EventType { get; set; }
         public DateTime CreationDate { get; set; }
-        //public virtual Photo LogoID { get; set; }
-        //public virtual Interest Interest { get; set; }
+        public virtual Photo Logo { get; set; }
+        public virtual Interest Interest { get; set; }
         public virtual Group Group { get; set; }
-        ///public virtual AppUser CreatorID { get; set; }
-        //public virtual ICollection<AppUser> Users { get; set; }
-        //public Event()
-        //{
-        //    Users = new HashSet<AppUser>();
-        //}
+        //public virtual User Creator { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 
     public enum EventType

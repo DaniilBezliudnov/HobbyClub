@@ -8,7 +8,7 @@ using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Data.Infrastructure.Configuration
 {
-    class GroupEntityConfig : EntityTypeConfiguration<Group>
+    public class GroupEntityConfig : EntityTypeConfiguration<Group>
     {
         public GroupEntityConfig()
         {
@@ -16,9 +16,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.HasKey<Guid>(gr => gr.GroupId);
             this.Property(p => p.Name).IsRequired();
             this.Property(p => p.Description).IsRequired();
-            //this.HasOptional(p => p.Users);
-            //this.HasOptional(p => p.LogoID)
-                //.WithRequired(g => g.Group);
+            this.HasMany(e => e.Events)
+                .WithOptional(e => e.Group)
+                .Map(e => e.MapKey("GroupId"));
         }
     }
 }

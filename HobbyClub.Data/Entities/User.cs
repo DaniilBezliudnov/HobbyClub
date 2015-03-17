@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HobbyClub.Data.Entities
 {
-   public class User
+    public class User
     {
-        public UInt32 UserId { get; set; }
+        public Guid UserId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Mail { get; set; }
@@ -17,6 +17,7 @@ namespace HobbyClub.Data.Entities
         public string Country { get; set; }
         public DateTime CreationDate { get; set; }
         public virtual Photo Photo { get; set; }
+        //public virtual Event CreaterOf { get; set; }
         public virtual ICollection<Event> Events { get; set; }
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
