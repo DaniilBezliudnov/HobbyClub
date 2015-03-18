@@ -8,17 +8,17 @@ using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Data.Infrastructure.Configuration
 {
-    public class IdentityUserEntityConfig : EntityTypeConfiguration<AppUser>
+    public class IdentityUserEntityConfig : EntityTypeConfiguration<User>
     {
         public IdentityUserEntityConfig()
         {
             this.HasKey(u => u.Id);
             this.Property(p => p.CreationDate)
                 .HasColumnType("datetime2");
-            this.Property(p => p.UserName)
-                .IsRequired();
-            this.Property(p => p.SecondName)
-                .IsRequired();
+            this.Property(p => p.UserName);
+
+            this.Property(p => p.SecondName);
+                
             this.Property(p => p.Email)
                 .IsRequired();
             this.HasMany<Event>(e => e.Events)

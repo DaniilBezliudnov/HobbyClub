@@ -2,7 +2,7 @@
 @using HobbyClub.Data.Infrastructure
 @using HobbyClub.Data.Entities
 @using HobbyClub.Web.Helpers
-@model IEnumerable<AppRole>
+@model IEnumerable<Role>
 @{ 
     ViewBag.Title = "Roles";
     Layout = "~/Views/Shared/_Layout - Admin.cshtml"; 
@@ -17,7 +17,7 @@
         }
         else
         {
-            foreach (AppRole role in Model)
+            foreach (Role role in Model)
             {
                 <tr>
                     <td>@role.Id</td>

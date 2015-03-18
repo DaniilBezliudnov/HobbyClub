@@ -21,9 +21,9 @@ namespace HobbyClub.Web.Models
     }
     public class RoleEditModel
     {
-        public AppRole Role { get; set; }
-        public IEnumerable<AppUser> Members { get; set; }
-        public IEnumerable<AppUser> NonMembers { get; set; }
+        public Role Role { get; set; }
+        public IEnumerable<User> Members { get; set; }
+        public IEnumerable<User> NonMembers { get; set; }
     }
     public class RoleModificationModel
     {

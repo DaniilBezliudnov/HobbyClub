@@ -18,8 +18,8 @@ namespace HobbyClub.Data.Migrations
 
         protected override void Seed(HobbyClub.Data.Infrastructure.HobbyClubIdentityDbContext context)
         {
-            AppUserManager userMgr = new AppUserManager(new UserStore<AppUser>(context));
-            AppRoleManager roleMgr = new AppRoleManager(new RoleStore<AppRole>(context));
+            AppUserManager userMgr = new AppUserManager(new UserStore<User>(context));
+            AppRoleManager roleMgr = new AppRoleManager(new RoleStore<Role>(context));
             string roleName = "Admin";
             string userName = "Admin";
             string password = "Qwerty";
@@ -27,12 +27,12 @@ namespace HobbyClub.Data.Migrations
 
             if (!roleMgr.RoleExists(roleName))
             {
-                roleMgr.Create(new AppRole(roleName));
+                roleMgr.Create(new Role(roleName));
             }
-            AppUser user = userMgr.FindByName(userName);
+            User user = userMgr.FindByName(userName);
             if (user == null)
             {
-                userMgr.Create(new AppUser { UserName = userName, Email = email, SecondName= "Adminium", CreationDate=DateTime.Today },
+                userMgr.Create(new User { UserName = userName, Email = email, SecondName= "Adminium", CreationDate=DateTime.Today },
                 password);
                 user = userMgr.FindByName(userName);
             }

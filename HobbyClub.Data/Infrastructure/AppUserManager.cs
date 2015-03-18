@@ -5,16 +5,16 @@ using Microsoft.Owin;
 using HobbyClub.Data.Entities;
 namespace HobbyClub.Data.Infrastructure
 {
-    public class AppUserManager : UserManager<AppUser>
+    public class AppUserManager : UserManager<User>
     {
-        public AppUserManager(IUserStore<AppUser> store)
+        public AppUserManager(IUserStore<User> store)
             : base(store)
         {
         }
         public static AppUserManager Create(IdentityFactoryOptions<AppUserManager> options, IOwinContext context)
         {
             HobbyClubIdentityDbContext db = context.Get<HobbyClubIdentityDbContext>();
-            AppUserManager manager = new AppUserManager(new UserStore<AppUser>(db));
+            AppUserManager manager = new AppUserManager(new UserStore<User>(db));
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
@@ -23,7 +23,7 @@ namespace HobbyClub.Data.Infrastructure
                 RequireLowercase = true,
                 RequireUppercase = true
             };
-            manager.UserValidator = new UserValidator<AppUser>(manager)
+            manager.UserValidator = new UserValidator<User>(manager)
             {
                 AllowOnlyAlphanumericUserNames = true,
                 RequireUniqueEmail = true

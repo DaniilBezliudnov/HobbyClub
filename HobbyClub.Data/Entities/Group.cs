@@ -14,7 +14,7 @@ namespace HobbyClub.Data.Entities
         public DateTime CreationDate { get; set; }
         public virtual Photo Logo { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
-        public virtual ICollection<AppUser> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<Event> Events { get; set; }
     }
 }

@@ -6,14 +6,14 @@ using Microsoft.Owin;
 using HobbyClub.Data.Entities;
 namespace HobbyClub.Data.Infrastructure
 {
-    public class AppRoleManager : RoleManager<AppRole>, IDisposable
+    public class AppRoleManager : RoleManager<Role>, IDisposable
     {
-        public AppRoleManager(RoleStore<AppRole> store) : base(store)
+        public AppRoleManager(RoleStore<Role> store) : base(store)
         {
         }
         public static AppRoleManager Create(IdentityFactoryOptions<AppRoleManager> options, IOwinContext context)
         {
-            return new AppRoleManager(new RoleStore<AppRole>(context.Get<HobbyClubIdentityDbContext>()));
+            return new AppRoleManager(new RoleStore<Role>(context.Get<HobbyClubIdentityDbContext>()));
         }
        
     }

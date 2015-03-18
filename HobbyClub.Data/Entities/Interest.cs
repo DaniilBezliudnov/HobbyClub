@@ -13,7 +13,7 @@ namespace HobbyClub.Data.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public virtual ICollection<Group> Groups { get; set; }
-        public virtual ICollection<AppUser> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<Event> Events { get; set; }
     }
 }

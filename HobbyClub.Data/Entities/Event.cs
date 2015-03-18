@@ -17,7 +17,7 @@ namespace HobbyClub.Data.Entities
         public virtual Interest Interest { get; set; }
         public virtual Group Group { get; set; }
         //public virtual User Creator { get; set; }
-        public virtual ICollection<AppUser> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 
     public enum EventType

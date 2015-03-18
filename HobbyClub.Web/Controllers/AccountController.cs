@@ -30,7 +30,7 @@ namespace Users.Controllers
         {
             if (ModelState.IsValid)
             {
-                AppUser user = await UserManager.FindAsync(details.Name, details.Password);
+                User user = await UserManager.FindAsync(details.Name, details.Password);
                 if (user == null)
                 {
                     ModelState.AddModelError("", "Invalid name or password.");

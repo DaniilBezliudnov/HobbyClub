@@ -27,7 +27,7 @@ namespace Users.Controllers
         {
             if (ModelState.IsValid)
             {
-                IdentityResult result = await RoleManager.CreateAsync(new AppRole(name));
+                IdentityResult result = await RoleManager.CreateAsync(new Role(name));
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index");
@@ -42,7 +42,7 @@ namespace Users.Controllers
         [HttpPost]
         public async Task<ActionResult> Delete(string id)
         {
-            AppRole role = await RoleManager.FindByIdAsync(id);
+            Role role = await RoleManager.FindByIdAsync(id);
             if (role != null)
             {
                 IdentityResult result = await RoleManager.DeleteAsync(role);
@@ -62,10 +62,10 @@ namespace Users.Controllers
         }
         public async Task<ActionResult> Edit(string id)
         {
-            AppRole role = await RoleManager.FindByIdAsync(id);
+            Role role = await RoleManager.FindByIdAsync(id);
             string[] memberIDs = role.Users.Select(x => x.UserId).ToArray();
-            IEnumerable<AppUser> members = UserManager.Users.Where(x => memberIDs.Any(y => y == x.Id));
-            IEnumerable<AppUser> nonMembers = UserManager.Users.Except(members);
+            IEnumerable<User> members = UserManager.Users.Where(x => memberIDs.Any(y => y == x.Id));
+            IEnumerable<User> nonMembers = UserManager.Users.Except(members);
             return View(new RoleEditModel
             {
                 Role = role,
