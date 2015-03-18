@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="mainApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.min.js"></script>
+	
+	<!-- <script src="angular.js-master\angularFiles.js"></script> -->
+	<!-- <script src="angular.js-master\src\minErr.js"></script>
+    <script src="angular.js-master\src\ngSanitize\sanitize.js"></script> -->
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+	<link rel="stylesheet" href="tree.css">
+  </head>
+  <body>
+  <div ng-controller="treeViewCtrl">
+	  <div compile="generateTreeHtml(tree, 0)" class="tree">
+	  </div>
+  </div>
+    <h2>To do List</h2>
+    <div ng-controller="TodoCtrl">
+	  <!--archive-->
+	  <a href="" ng-click="showArchive()">show archive</a>
+	  <div>
+	  <ul ng-hide="archiveListVisible">
+		  <li ng-repeat="todo in archiveList">
+			  <span>{{todo.text}}</span>
+		  </li>
+	  </ul>
+	  </div>
+	  <!--status-->
+      <span>Remain {{remaining()}} from {{todos.length}}</span>
+      [ <a href="" ng-click="archive()">archive</a> ]
+	  <!--list-->
+      <ul class="unstyled">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text | del1}}</span>
+        </li>
+      </ul>
+	  <!--add-->
+      <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="30"
+               placeholder="enter new todo item">
+        <input class="btn-primary" type="submit" value="add">
+      </form>
+	  
+    </div>
+	<!--selector test-->
+	<div id="id1">
+	1
+		<div>
+		1.1
+			<div>
+			1.1.1
+			</div>
+			<div>
+			1.1.2
+			</div>
+		</div>
+		<div>
+		1.2
+			<div>
+			1.2.1
+			</div>
+		</div>
+	</div>
+	<div>
+	2
+		<div>
+		2.1
+		</div>
+	</div>
+  </body>
+</html>
