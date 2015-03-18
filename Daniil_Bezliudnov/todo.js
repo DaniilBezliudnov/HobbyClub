@@ -67,7 +67,7 @@ angular.module("mainApp", ["addModule", "ngSanitize"])
 		]};
 	
 	$scope.hideInner = function(name){
-		var hideClass = document.querySelector("ul#" + name + " li ul li span").getAttribute("class");
+		var hideClass = document.querySelector("ul#" + name + ">li>ul>li").getAttribute("class");
 		var forHide = document.querySelectorAll(
             "ul#" + name + ">li>ul>li>span" + //span
             ", ul#" + name + ">li>ul>li>span>a" //a
