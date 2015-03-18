@@ -31,7 +31,8 @@ namespace HobbyClub.Web
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/Css/bootstrap.min.css",
-                      "~/Content/Css/font - awesome.min.css",
+                      "~/Content/Css/font-awesome.css",
+                      "~/Content/Css/font-awesome.min.css",
                       "~/Content/Css/animate.min.css",
                       "~/Content/Css/owl.carousel.css",
                       "~/Content/Css/owl.transitions.css",
