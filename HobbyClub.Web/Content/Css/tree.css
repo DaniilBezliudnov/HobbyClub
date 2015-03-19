@@ -15,7 +15,7 @@
   animation-duration: 2s;
 }
 
-@-webkit-keyframes fadeOutDown {
+@-webkit-keyframes myFadeOutDown {
   0% {
     opacity: 1;
     min-height : 20px;
@@ -36,7 +36,7 @@
   }
 }
 
-@keyframes fadeOutDown {
+@keyframes myFadeOutDown {
   0% {
     opacity: 1;
     min-height : 20px;
@@ -57,12 +57,12 @@
   }
 }
 
-.fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
+.myFadeOutDown {
+  -webkit-animation-name: myFadeOutDown;
+  animation-name: myFadeOutDown;
 }
 
-@-webkit-keyframes fadeInDown {
+@-webkit-keyframes myFadeInDown {
   0% {
     min-height : 0px;
     /*max-height : 0px;*/
@@ -88,7 +88,7 @@
   }
 }
 
-@keyframes fadeInDown {
+@keyframes myFadeInDown {
   0% {
     min-height : 0px;
     /*max-height : 0px;*/
@@ -114,9 +114,9 @@
   }
 }
 
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+.myFadeInDown {
+  -webkit-animation-name: myFadeInDown;
+  animation-name: myFadeInDown;
 }
 
 

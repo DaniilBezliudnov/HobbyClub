@@ -253,11 +253,12 @@
     <Content Include="Content\Images\testimonial\01.jpg" />
     <Content Include="Content\Images\testimonial\bg.jpg" />
     <Content Include="Content\Images\work-process\bg.jpg" />
-    <Content Include="Scripts\app\angularModules.js" />
+    <Content Include="Scripts\app\interest\angularModules.js" />
     <Content Include="Scripts\app\layout.js" />
     <Content Include="Scripts\libraries\angular.js" />
     <Content Include="Scripts\libraries\bootstrap.min.js" />
     <Content Include="Scripts\libraries\html5shiv.js" />
+    <Content Include="Scripts\libraries\jquery-1.11.2.min.js" />
     <Content Include="Scripts\libraries\jquery.inview.min.js" />
     <Content Include="Scripts\libraries\jquery.isotope.min.js" />
     <Content Include="Scripts\libraries\jquery.prettyPhoto.js" />

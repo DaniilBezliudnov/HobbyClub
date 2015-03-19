@@ -8,8 +8,12 @@ namespace HobbyClub.Web
 		// For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
 		public static void RegisterBundles(BundleCollection bundles)
 		{
-			bundles.Add(new ScriptBundle("~/bundles/libraries/jquery").Include(
-                        "~/Scripts/libraries/jquery.js"));
+            bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
+                //"~/Scripts/libraries/jquery.js",
+                       "~/Scripts/libraries/jquery-1.11.2.min.js",
+                       "~/Scripts/libraries/angular.js",
+                      "~/Scripts/libraries/angular-sanitize.min.js"
+                       ));
 
  			bundles.Add(new ScriptBundle("~/bundles/libraries/bootstrap").Include(
                       "~/Scripts/libraries/bootstrap.min.js",
@@ -26,8 +30,12 @@ namespace HobbyClub.Web
                        "~/Scripts/libraries/main.js"
                       ));
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                  "~/Scripts/app/layout.js"
+                  "~/Scripts/app/layout.js",
+                  "~/Scripts/app/interest/angularModules.js"
                      ));
+
+
+
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/Css/bootstrap.min.css",
@@ -38,7 +46,8 @@ namespace HobbyClub.Web
                       "~/Content/Css/owl.transitions.css",
                       "~/Content/Css/prettyPhoto.css",
                       "~/Content/Css/main.css",
-                      "~/Content/Css/responsive.css"
+                      "~/Content/Css/responsive.css",
+                      "~/Content/Css/tree.css"
                       ));
 		}
 	}
