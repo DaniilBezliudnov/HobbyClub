@@ -161,6 +161,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterestController.cs" />
     <Compile Include="Controllers\RoleAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -335,6 +336,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_LayoutForNonAuthorized.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Interest\GetAllInterests.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -37,11 +37,11 @@ namespace HobbyClub.Web
             //    defaults: new { controller = "Home", action = "Home", page = @"interests|events|groups", number = UrlParameter.Optional }
             //);
 
-            routes.MapRoute(
-            name: "Interests",
-            url: "interests/{page}",
-            defaults: new { controller = "Home", action = "Interests", page = UrlParameter.Optional }
-        );
+            //routes.MapRoute(
+            //name: "Interests",
+            //url: "interests/{page}",
+            //defaults: new { controller = "Home", action = "Interests", page = UrlParameter.Optional }
+        //);
 
             routes.MapRoute(
             name: "Events",
@@ -59,7 +59,11 @@ namespace HobbyClub.Web
                     url: "log-in",
                     defaults: new { controller = "Home", action = "" } /// SIGN IN ДОПИСАТЬ!!!!
                 );
-
+            routes.MapRoute(
+                name : "defaultRoute",
+                url : "{controller}/{action}",
+                defaults: new { controller = "controller", action = "action" }
+                );
         }
     }
 }
