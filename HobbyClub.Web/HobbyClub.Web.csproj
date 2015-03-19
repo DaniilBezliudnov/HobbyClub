@@ -180,6 +180,7 @@
     <Content Include="Content\Css\owl.transitions.css" />
     <Content Include="Content\Css\prettyPhoto.css" />
     <Content Include="Content\Css\responsive.css" />
+    <Content Include="Content\Css\tree.css" />
     <Content Include="Content\Images\main-feature.png" />
     <Content Include="Content\Images\slider\bg1.jpg" />
     <Content Include="Content\Images\slider\bg2.jpg" />
@@ -252,6 +253,7 @@
     <Content Include="Content\Images\testimonial\01.jpg" />
     <Content Include="Content\Images\testimonial\bg.jpg" />
     <Content Include="Content\Images\work-process\bg.jpg" />
+    <Content Include="Scripts\app\angularModules.js" />
     <Content Include="Scripts\app\layout.js" />
     <Content Include="Scripts\libraries\angular.js" />
     <Content Include="Scripts\libraries\bootstrap.min.js" />
