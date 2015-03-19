@@ -13,7 +13,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         public PhotoEntityConfig()
         {
             this.ToTable("Photo");
-            this.HasKey<Guid>(p => p.PhotoId);
+            this.HasKey<Guid>(p => p.ID);
             this.Property(p => p.Value).IsRequired();
             this.HasOptional(e => e.User)
                 .WithOptionalPrincipal(e => e.Photo)

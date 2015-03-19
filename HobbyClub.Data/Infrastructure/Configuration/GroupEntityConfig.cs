@@ -13,7 +13,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         public GroupEntityConfig()
         {
             this.ToTable("Group");
-            this.HasKey<Guid>(gr => gr.GroupId);
+            this.HasKey<Guid>(gr => gr.ID);
             this.Property(p => p.Name).IsRequired();
             this.Property(p => p.Description).IsRequired();
             this.HasMany(e => e.Events)

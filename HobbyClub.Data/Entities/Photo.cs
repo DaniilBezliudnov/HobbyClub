@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using HobbyClub.Data.Abstract;
 
 namespace HobbyClub.Data.Entities
 {
-    public class Photo
+    public class Photo :IEntity
     {
-        public Guid PhotoId { get; set; }
+        public Guid ID { get; set; }
         public string Value { get; set; }
         public virtual User User { get; set; }
         public virtual Interest Interest { get; set; }

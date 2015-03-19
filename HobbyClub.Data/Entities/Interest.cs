@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HobbyClub.Data.Abstract;
 
 namespace HobbyClub.Data.Entities
 {
-    public class Interest
+    public class Interest : IEntity
     {
-        public Guid InterestId { get; set; }
+        public Guid ID { get; set; }
         public virtual Photo Logo { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

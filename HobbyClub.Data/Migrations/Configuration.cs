@@ -29,7 +29,7 @@ namespace HobbyClub.Data.Migrations
             {
                 roleMgr.Create(new Role(roleName));
             }
-            User user = userMgr.FindByName(userName);
+            IUser user = userMgr.FindByName(userName);
             if (user == null)
             {
                 userMgr.Create(new User { UserName = userName, Email = email, SecondName= "Adminium", CreationDate=DateTime.Today },
