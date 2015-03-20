@@ -14,6 +14,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         {
             this.ToTable("Event");
             this.HasKey<Guid>(p => p.ID);
+            this.Property(p=> p.ID).HasColumnName("EventId");
             this.Property(p => p.Name)
                 .IsRequired();
             this.Property(p => p.Description)
@@ -21,6 +22,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Property(p => p.CreationDate)
                 .HasColumnType("datetime2")
                 .IsRequired();
+                            
             //this.HasRequired<User>(u => u.Creator)
             //    .WithRequiredDependent(e => e.)
             //    .Map(e => e.MapKey("EventCreatorId"));

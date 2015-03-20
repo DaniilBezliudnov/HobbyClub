@@ -12,7 +12,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
     {
         public IdentityRoleConfig()
         {
+
             this.HasKey(r => r.Id);
+            this.Property(r => r.Id).HasColumnName("RoleId");
             this.Ignore(r => r.ID);
         }
     }
