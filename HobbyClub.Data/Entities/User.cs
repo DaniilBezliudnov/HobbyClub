@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using HobbyClub.Data.Abstract;
 namespace HobbyClub.Data.Entities
 {
-    public class User : IdentityUser/*, IEntity*/
+    public class User : IdentityUser, IEntity
     {
 
         public string SecondName { get; set; }
@@ -16,16 +16,16 @@ namespace HobbyClub.Data.Entities
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
 
-        //public Guid ID
-        //{
-        //    get
-        //    {
-        //        return Guid.Parse(base.Id);
-        //    }
-        //    set
-        //    {
-        //        base.Id = value.ToString();
-        //    }
-        //}
+        public Guid ID
+        {
+            get
+            {
+                return Guid.Parse(base.Id);
+            }
+            set
+            {
+                base.Id = value.ToString();
+            }
+        }
     }
 }

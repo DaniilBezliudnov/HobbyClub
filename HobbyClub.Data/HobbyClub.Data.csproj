@@ -82,6 +82,7 @@
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
     <Compile Include="Infrastructure\HobbyClubIdentityDbContext.cs" />
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />

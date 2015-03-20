@@ -18,7 +18,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Property(p => p.UserName);
 
             this.Property(p => p.SecondName);
-                
+            this.Ignore(p => p.ID);
             this.Property(p => p.Email)
                 .IsRequired();
             this.HasMany<Event>(e => e.Events)

@@ -24,6 +24,7 @@ namespace HobbyClub.Data.Infrastructure
             modelBuilder.Configurations.Add(new InterestEntityConfig());
             modelBuilder.Configurations.Add(new PhotoEntityConfig());
             modelBuilder.Configurations.Add(new IdentityUserEntityConfig());
+            modelBuilder.Configurations.Add(new IdentityRoleConfig());
         }
 
         public DbSet<Event> Events { get; set; }
