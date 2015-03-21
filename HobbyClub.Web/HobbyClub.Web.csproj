@@ -326,9 +326,6 @@
     <Content Include="Views\Home\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\libraries\jquery.js" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Groups.cshtml" />
   </ItemGroup>
   <ItemGroup>
