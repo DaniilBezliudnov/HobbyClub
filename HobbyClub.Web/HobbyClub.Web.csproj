@@ -255,6 +255,7 @@
     <Content Include="Content\Images\work-process\bg.jpg" />
     <Content Include="Scripts\app\interest\treeView.js" />
     <Content Include="Scripts\app\layout.js" />
+    <Content Include="Scripts\libraries\angular-sanitize.min.js" />
     <Content Include="Scripts\libraries\angular.js" />
     <Content Include="Scripts\libraries\bootstrap.min.js" />
     <Content Include="Scripts\libraries\html5shiv.js" />

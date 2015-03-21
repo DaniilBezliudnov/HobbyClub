@@ -21,38 +21,52 @@ angular.module("App", ["treeViewModule", "ngSanitize"])
     };
 
     $scope.hideInner = function (name) {
-        var hideClass = document.querySelector("ul#" + name + ">li>ul>li").getAttribute("class");
+        var hideSelect = document.querySelector("ul#" + name + ">li>ul>li");
+        if (!hideSelect)
+            return;
+        var hideClass = hideSelect.getAttribute("class");
         var forHide = document.querySelectorAll(
-            "ul#" + name + ">li>ul>li>span" + //span
-            ", ul#" + name + ">li>ul>li>span>a" //a
-             + ", ul#" + name + ">li>ul>li" //li
+            "ul#" + name + ">li>ul>li>div" + //div
+            ", ul#" + name + ">li>ul>li" //li
             );
         for (var i = 0; i < forHide.length; ++i) {
             forHide[i].setAttribute("class", (hideClass == "animated myFadeInDown" || hideClass == "animated") ? "animated myFadeOutDown" : "animated myFadeInDown");
         }
+        var forRotate = document.querySelectorAll("ul#" + name + ">li>div>span");
+        if (!forRotate)
+            return;
+        for (i = 0; i < forRotate.length; ++i) {
+            forRotate[i].setAttribute("class", (hideClass == "animated rotateDown" || hideClass == "animated") ? "animated rotateUp" : "animated rotateDown");
+        }
     };
 
-    //юзаем хтмл + потом меняем классы
     $scope.generateTreeHtml = function (root, level) {
         if (!root || !angular.isNumber(level)) return "";
 
         //start ul
-        var resStr = '<ul ';
-        //add classes
-        resStr += "id = \"objectId" + root.name + "\""
-        resStr += ">"
+        var resStr = '<ul id = "objectId' + root.name + '" >';
 
         //start li
+        var firstAnimType;
         if (level == 0)
-            resStr += '<li class="animated myFadeInDown"><span class="animated myFadeInDown"><a class="animated myFadeInDown" href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
+            firstAnimType = "myFadeInDown";
         else
-            resStr += '<li class="animated myFadeOutDown"><span class="animated myFadeOutDown"><a class="animated myFadeOutDown" href="" ng-click="hideInner(\'objectId' + root.name + '\')">' + root.name + '</a></span>';//main object
+            firstAnimType = "myFadeOutDown";
+
+        resStr += '<li class="animated ' + firstAnimType + '"><div class="animated ' + firstAnimType + '" ng-click="hideInner(\'objectId' + root.name + '\')">';
+        //start main object
+        if (root.childrens)
+            resStr += '<span class="animated">&#9660</span>';
+        resStr += '<img src="/Content/Images/logo.png" ></img>';
+        resStr += 'super new text for our new super new site without any meaning la lala a ' + root.name;
+        //end main object
+        resStr += '</div>';
         if (root.childrens) {
             var addStr = "";
 
             root.childrens.forEach(function (item, ind, arr) {
                 addStr += $scope.generateTreeHtml(item, ++level);
-            });
+             });
 
             resStr += addStr;
         }
