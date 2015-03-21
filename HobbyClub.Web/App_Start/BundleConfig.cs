@@ -9,7 +9,6 @@ namespace HobbyClub.Web
 		public static void RegisterBundles(BundleCollection bundles)
 		{
             bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
-                //"~/Scripts/libraries/jquery.js",
                        "~/Scripts/libraries/jquery-1.11.2.min.js",
                        "~/Scripts/libraries/angular.js",
                       "~/Scripts/libraries/angular-sanitize.min.js"
@@ -31,7 +30,7 @@ namespace HobbyClub.Web
                       ));
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                   "~/Scripts/app/layout.js",
-                  "~/Scripts/app/interest/angularModules.js"
+                  "~/Scripts/app/interest/treeView.js"
                      ));
 
 
