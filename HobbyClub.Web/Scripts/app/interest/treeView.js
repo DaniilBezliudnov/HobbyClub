@@ -32,20 +32,22 @@ angular.module("App", ["treeViewModule", "ngSanitize"])
         for (var i = 0; i < forHide.length; ++i) {
             forHide[i].setAttribute("class", (hideClass == "animated myFadeInDown" || hideClass == "animated") ? "animated myFadeOutDown" : "animated myFadeInDown");
         }
-        var forRotate = document.querySelectorAll("ul#" + name + ">li>div>span");
-        if (!forRotate)
+        var forRotate = document.querySelector("ul#" + name + ">li>div>i");
+        if (!forRotate) {
+            window.alert('nothing');
             return;
-        for (i = 0; i < forRotate.length; ++i) {
-            forRotate[i].setAttribute("class", (hideClass == "animated rotateDown" || hideClass == "animated") ? "animated rotateUp" : "animated rotateDown");
         }
+        var forRotateClass = forRotate.getAttribute("class");
+        forRotate.setAttribute("class", (forRotateClass == "animated rotateDown" || forRotateClass == "animated") ? "animated rotateUp" : "animated rotateDown");
     };
+    //always down
 
     $scope.generateTreeHtml = function (root, level) {
         if (!root || !angular.isNumber(level)) return "";
 
         //start ul
         var resStr = '<ul id = "objectId' + root.name + '" >';
-
+        
         //start li
         var firstAnimType;
         if (level == 0)
@@ -53,10 +55,10 @@ angular.module("App", ["treeViewModule", "ngSanitize"])
         else
             firstAnimType = "myFadeOutDown";
 
-        resStr += '<li class="animated ' + firstAnimType + '"><div class="animated ' + firstAnimType + '" ng-click="hideInner(\'objectId' + root.name + '\')">';
+        resStr += '<li class="animated' + firstAnimType + '"><div class="animated ' + firstAnimType + '" ng-click="hideInner(\'objectId' + root.name + '\')">';
         //start main object
         if (root.childrens)
-            resStr += '<span class="animated">&#9660</span>';
+            resStr += '<i class="animated">&#9660</i>';
         resStr += '<img src="/Content/Images/logo.png" ></img>';
         resStr += 'super new text for our new super new site without any meaning la lala a ' + root.name;
         //end main object
