@@ -25,12 +25,14 @@ namespace HobbyClub.Data.Infrastructure
             modelBuilder.Configurations.Add(new LogoEntityConfig());
             modelBuilder.Configurations.Add(new IdentityUserEntityConfig());
             modelBuilder.Configurations.Add(new IdentityRoleConfig());
+            modelBuilder.Configurations.Add(new ChatLineConfig());
         }
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Interest> Interests { get; set; }
         public DbSet<Logo> Photos { get; set; }
+        public DbSet<ChatLine> ChatLines { get; set; }
     }
 
     //public class IdentityDbInit : NullDatabaseInitializer<HobbyClubIdentityDbContext>
