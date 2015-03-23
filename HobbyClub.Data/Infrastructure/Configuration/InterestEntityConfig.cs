@@ -23,6 +23,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.HasMany<Event>(e => e.Events)
                 .WithRequired(e => e.Interest)
                 .Map(e => e.MapKey("InterestId"));
+            this.HasOptional(e => e.ParentId)
+                .WithOptionalPrincipal()
+                .Map(m=>m.MapKey("ParentId"));
             this.HasMany<Group>(e => e.Groups)
                 .WithMany(gr => gr.Interests)
                 .Map(ig =>

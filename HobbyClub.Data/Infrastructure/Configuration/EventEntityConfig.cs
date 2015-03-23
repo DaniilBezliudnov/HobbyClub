@@ -23,9 +23,6 @@ namespace HobbyClub.Data.Infrastructure.Configuration
                 .HasColumnType("datetime2")
                 .IsRequired();
                             
-            //this.HasRequired<User>(u => u.Creator)
-            //    .WithRequiredDependent(e => e.)
-            //    .Map(e => e.MapKey("EventCreatorId"));
         }
     }
 }

@@ -23,6 +23,10 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Ignore(p => p.ID);
             this.Property(p => p.Email)
                 .IsRequired();
+            this.HasMany<Event>(e => e.CreatedEvents)
+                .WithRequired(e => e.Creator)
+                .Map(e => e.MapKey("CreatorId"))
+                .WillCascadeOnDelete(false);
             this.HasMany<Event>(e => e.Events)
                 .WithMany(u => u.Users)
                 .Map(us =>

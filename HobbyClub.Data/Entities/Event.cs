@@ -17,7 +17,7 @@ namespace HobbyClub.Data.Entities
         public virtual Logo Logo { get; set; }
         public virtual Interest Interest { get; set; }
         public virtual Group Group { get; set; }
-        //public virtual User Creator { get; set; }
+        public virtual User Creator { get; set; }
         public virtual ICollection<User> Users { get; set; }
     }
 
