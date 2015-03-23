@@ -12,6 +12,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
     {
         public IdentityUserEntityConfig()
         {
+            this.ToTable("User");
             this.HasKey(u => u.Id);
             this.Property(u => u.Id).HasColumnName("UserId");
             this.Property(p => p.CreationDate)

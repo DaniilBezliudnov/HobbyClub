@@ -2,12 +2,14 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using HobbyClub.Data.Abstract;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace HobbyClub.Data.Entities
 {
     public class User : IdentityUser, IEntity
     {
 
         public string SecondName { get; set; }
+        public string FirstName { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
         public DateTime CreationDate { get; set; }
