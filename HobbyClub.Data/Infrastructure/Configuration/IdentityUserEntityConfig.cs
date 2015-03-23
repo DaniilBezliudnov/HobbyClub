@@ -12,13 +12,11 @@ namespace HobbyClub.Data.Infrastructure.Configuration
     {
         public IdentityUserEntityConfig()
         {
+            this.ToTable("User");
             this.HasKey(u => u.Id);
             this.Property(p => p.CreationDate)
                 .HasColumnType("datetime2");
-            this.Property(p => p.UserName);
-
-            this.Property(p => p.SecondName);
-                
+            this.Property(p => p.UserName);    
             this.Property(p => p.Email)
                 .IsRequired();
             this.HasMany<Event>(e => e.Events)
