@@ -6,7 +6,7 @@ using HobbyClub.Data.Abstract;
 
 namespace HobbyClub.Data.Entities
 {
-    public class Photo :IEntity
+    public class Logo :IEntity
     {
         public Guid ID { get; set; }
         public string Value { get; set; }

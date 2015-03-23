@@ -14,6 +14,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         {
             this.ToTable("Group");
             this.HasKey<Guid>(gr => gr.ID);
+            this.Property(gr => gr.ID).HasColumnName("GroupId");
             this.Property(p => p.Name).IsRequired();
             this.Property(p => p.Description).IsRequired();
             this.HasMany(e => e.Events)

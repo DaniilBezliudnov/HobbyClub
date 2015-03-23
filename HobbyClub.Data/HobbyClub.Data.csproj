@@ -82,7 +82,8 @@
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Infrastructure\HobbyClubIdentityDbContext.cs" />
+    <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
+    <Compile Include="Infrastructure\Context\HobbyClubIdentityDbContext.cs" />
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -90,12 +91,12 @@
     <Compile Include="Infrastructure\Configuration\EventEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\GroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\InterestEntityConfig.cs" />
-    <Compile Include="Infrastructure\Configuration\PhotoEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\LogoEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\IdentityUserEntityConfig.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Interest.cs" />
-    <Compile Include="Entities\Photo.cs" />
+    <Compile Include="Entities\Logo.cs" />
     <Compile Include="Concrete\BaseRepository.cs" />
     <Compile Include="Abstract\IDataBaseFactory.cs" />
     <Compile Include="Abstract\IDataBaseRepository.cs" />
@@ -103,7 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fake\" />
-    <Folder Include="Infrastructure\Context\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

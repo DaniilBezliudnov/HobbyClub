@@ -22,14 +22,15 @@ namespace HobbyClub.Data.Infrastructure
             modelBuilder.Configurations.Add(new EventEntityConfig());
             modelBuilder.Configurations.Add(new GroupEntityConfig());
             modelBuilder.Configurations.Add(new InterestEntityConfig());
-            modelBuilder.Configurations.Add(new PhotoEntityConfig());
+            modelBuilder.Configurations.Add(new LogoEntityConfig());
             modelBuilder.Configurations.Add(new IdentityUserEntityConfig());
+            modelBuilder.Configurations.Add(new IdentityRoleConfig());
         }
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Interest> Interests { get; set; }
-        public DbSet<Photo> Photos { get; set; }
+        public DbSet<Logo> Photos { get; set; }
     }
 
     //public class IdentityDbInit : NullDatabaseInitializer<HobbyClubIdentityDbContext>

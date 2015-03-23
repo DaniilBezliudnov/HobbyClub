@@ -64,7 +64,7 @@ namespace Users.Controllers
         {
             Role role = await RoleManager.FindByIdAsync(id);
             string[] memberIDs = role.Users.Select(x => x.UserId).ToArray();
-            IEnumerable<User> members = UserManager.Users.Where(x => memberIDs.Any(y => y == ((IUser)x).Id));
+            IEnumerable<User> members = UserManager.Users.Where(x => memberIDs.Any(y => y == x.Id));
             IEnumerable<User> nonMembers = UserManager.Users.Except(members);
             return View(new RoleEditModel
             {

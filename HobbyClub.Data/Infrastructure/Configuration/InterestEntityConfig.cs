@@ -14,6 +14,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         {
             this.ToTable("Interest");
             this.HasKey<Guid>(i => i.ID);
+            this.Property(i => i.ID).HasColumnName("InterestId");
             this.Property(p => p.Name)
                 .IsRequired()
                 .HasMaxLength(300);
