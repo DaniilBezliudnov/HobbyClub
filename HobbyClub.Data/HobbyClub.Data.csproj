@@ -97,7 +97,6 @@
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Concrete\EntityDataBaseFactory.cs" />
     <Compile Include="Infrastructure\Configuration\EventEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\GroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\InterestEntityConfig.cs" />
@@ -107,9 +106,8 @@
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\Interest.cs" />
     <Compile Include="Entities\Logo.cs" />
-    <Compile Include="Concrete\BaseRepository.cs" />
-    <Compile Include="Abstract\IDataBaseFactory.cs" />
-    <Compile Include="Abstract\IDataBaseRepository.cs" />
+    <Compile Include="Concrete\GenericRepository.cs" />
+    <Compile Include="Abstract\IBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
