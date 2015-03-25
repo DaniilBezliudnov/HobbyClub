@@ -38,7 +38,7 @@ namespace HobbyClub.Data.Infrastructure
         //public DbSet<ChatLine> ChatLines { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Country { get; set; }
-
+        public DbSet<UserGroup> UserGroups { get; set; }
     }
 
     //public class IdentityDbInit : NullDatabaseInitializer<HobbyClubIdentityDbContext>
