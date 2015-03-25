@@ -3,18 +3,18 @@ using System.Web.Optimization;
 
 namespace HobbyClub.Web
 {
-	public class BundleConfig
-	{
-		// For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
-		public static void RegisterBundles(BundleCollection bundles)
-		{
+    public class BundleConfig
+    {
+        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        public static void RegisterBundles(BundleCollection bundles)
+        {
             bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
                        "~/Scripts/libraries/jquery-1.11.2.min.js",
                        "~/Scripts/libraries/angular.js",
                       "~/Scripts/libraries/angular-sanitize.min.js"
                        ));
 
- 			bundles.Add(new ScriptBundle("~/bundles/libraries/bootstrap").Include(
+            bundles.Add(new ScriptBundle("~/bundles/libraries/bootstrap").Include(
                       "~/Scripts/libraries/bootstrap.min.js",
                       "~/Scripts/libraries/respond.min.js"));
 
@@ -30,14 +30,15 @@ namespace HobbyClub.Web
                       ));
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                   "~/Scripts/app/layout.js",
+                  "~/Scripts/app/main_page.js",
                   "~/Scripts/app/interest/treeView.js"
                      ));
 
 
 
 
-			bundles.Add(new StyleBundle("~/Content/css").Include(
-					  "~/Content/Css/bootstrap.min.css",
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/Css/bootstrap.min.css",
                       "~/Content/Css/font-awesome.css",
                       "~/Content/Css/font-awesome.min.css",
                       "~/Content/Css/animate.min.css",
@@ -48,6 +49,6 @@ namespace HobbyClub.Web
                       "~/Content/Css/responsive.css",
                       "~/Content/Css/tree.css"
                       ));
-		}
-	}
+        }
+    }
 }
