@@ -15,9 +15,7 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.ToTable("ChatLine");
             this.HasKey(k => k.ID);
             this.Property(p => p.ID).HasColumnName("ChatLineId");
-            //this.HasMany<Event>(e => e.CreatedEvents)
-            //    .WithRequired(e => e.Creator)
-            //    .Map(e => e.MapKey("CreatorId"))
+
         }
     }
 }

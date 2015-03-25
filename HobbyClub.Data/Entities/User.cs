@@ -18,6 +18,7 @@ namespace HobbyClub.Data.Entities
         public virtual ICollection<Event> CreatedEvents { get; set; }
         public virtual ICollection<Group> Groups { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
+        public virtual ICollection<UserGroup> UserGroups { get; set; }
 
         public Guid ID
         {

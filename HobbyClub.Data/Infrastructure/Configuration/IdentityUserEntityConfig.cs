@@ -35,14 +35,6 @@ namespace HobbyClub.Data.Infrastructure.Configuration
                     us.MapRightKey("EventId");
                     us.ToTable("UserEvent");
                 });
-            this.HasMany<Group>(u => u.Groups)
-                .WithMany(u => u.Users)
-                .Map(us =>
-                {
-                    us.MapLeftKey("UserId");
-                    us.MapRightKey("GroupId");
-                    us.ToTable("UserGroup");
-                });
             this.HasMany<Interest>(e => e.Interests)
                  .WithMany(u => u.Users)
                  .Map(us =>

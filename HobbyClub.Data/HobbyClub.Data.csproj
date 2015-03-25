@@ -83,10 +83,12 @@
     <Compile Include="Entities\ChatLine.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserGroup.cs" />
     <Compile Include="Fake\Class1.cs" />
     <Compile Include="Fake\IFakeRepository.cs" />
     <Compile Include="Infrastructure\Configuration\ChatLineConfig.cs" />
     <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\UserGroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Context\HobbyClubIdentityDbContext.cs" />
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />
