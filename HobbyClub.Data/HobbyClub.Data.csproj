@@ -81,12 +81,16 @@
   <ItemGroup>
     <Compile Include="Abstract\IEntity.cs" />
     <Compile Include="Entities\ChatLine.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Country.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\UserGroup.cs" />
     <Compile Include="Fake\Class1.cs" />
     <Compile Include="Fake\IFakeRepository.cs" />
     <Compile Include="Infrastructure\Configuration\ChatLineConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\CityEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\CountryEntityConfig.cs" />
     <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
     <Compile Include="Infrastructure\Configuration\UserGroupEntityConfig.cs" />
     <Compile Include="Infrastructure\Context\HobbyClubIdentityDbContext.cs" />

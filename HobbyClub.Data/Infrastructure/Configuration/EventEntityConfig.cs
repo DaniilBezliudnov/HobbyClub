@@ -19,9 +19,14 @@ namespace HobbyClub.Data.Infrastructure.Configuration
                 .IsRequired();
             this.Property(p => p.Description)
                 .IsRequired();
+            this.Property(p => p.Place)
+                .IsRequired();
             this.Property(p => p.CreationDate)
                 .HasColumnType("datetime2")
                 .IsRequired();
+            this.HasOptional<City>(c => c.City)
+                .WithOptionalDependent()
+                .Map(c => c.MapKey("CityId"));
                             
         }
     }

@@ -19,6 +19,8 @@ namespace HobbyClub.Data.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Configurations.Add(new CityEntityConfig());
+            modelBuilder.Configurations.Add(new CountryEntityConfig());
             modelBuilder.Configurations.Add(new EventEntityConfig());
             modelBuilder.Configurations.Add(new GroupEntityConfig());
             modelBuilder.Configurations.Add(new InterestEntityConfig());
@@ -33,8 +35,10 @@ namespace HobbyClub.Data.Infrastructure
         public DbSet<Group> Groups { get; set; }
         public DbSet<Interest> Interests { get; set; }
         public DbSet<Logo> Photos { get; set; }
-        public DbSet<UserGroup> UserGroups { get; set; }
         //public DbSet<ChatLine> ChatLines { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Country { get; set; }
+
     }
 
     //public class IdentityDbInit : NullDatabaseInitializer<HobbyClubIdentityDbContext>

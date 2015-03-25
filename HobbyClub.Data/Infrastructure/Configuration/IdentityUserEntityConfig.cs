@@ -23,6 +23,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Ignore(p => p.ID);
             this.Property(p => p.Email)
                 .IsRequired();
+            this.HasOptional<City>(c => c.City)
+                .WithOptionalDependent()
+                .Map(c => c.MapKey("CityId"));
             this.HasMany<Event>(e => e.CreatedEvents)
                 .WithRequired(e => e.Creator)
                 .Map(e => e.MapKey("CreatorId"))
