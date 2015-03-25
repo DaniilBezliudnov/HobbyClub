@@ -1,35 +1,24 @@
-﻿<section id="main-slider">
+﻿@model HobbyClub.Web.Models.MainPageViewModel
+<section id="main-slider">
     <div class="owl-carousel">
-        <div class="item" style="background-image: url(Content/Images/slider/bg1.jpg);">
-            <div class="slider-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="carousel-content">
-                                <h2><span>Interest1</span> </h2>
-                                @*<p>Lorem ipsum  </p>*@
-                                <a class="btn btn-primary btn-lg" href="#">Join</a>
+        @foreach (var slide in Model.slider)
+        {
+            <div class="item" @(!string.IsNullOrWhiteSpace(slide.img) ? "style=background-image:url('" + slide.img + "')" : string.Empty)>
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h2><span>@slide.name</span> </h2>
+                                    <p>@slide.description</p>
+                                    <a class="btn btn-primary btn-lg" href="#">Join</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!--/.item-->
-        <div class="item" style="background-image: url(Content/Images/slider/bg2.jpg);">
-            <div class="slider-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="carousel-content">
-                                <h2> <span>Interest2</span> </h2>
-                                @*<p></p>*@
-                                <a class="btn btn-primary btn-lg" href="#">Join</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.item-->
+        }<!--/.item-->
     </div><!--/.owl-carousel-->
 </section><!--/#main-slider-->
 <section id="features">
@@ -81,86 +70,18 @@
             <p class="text-center wow fadeInDown"> Our users admire the most</p>
         </div>
         <div class="portfolio-items">
-            <div class="portfolio-item creative">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/01.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Board Games</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+            @foreach (var interest in Model.interests)
+            {
+                <div class="portfolio-item creative">
+                    <div class="portfolio-item-inner">
+                        <img class="img-responsive" src=@interest.img alt="">
+                        <div class="portfolio-info">
+                            <h3>@interest.name</h3>
+                            <a class="preview" href=@interest.previewImg rel="prettyPhoto"><i class="fa fa-eye"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item corporate portfolio">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/02.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Soccer</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item creative">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/03.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Traveling</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item corporate">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/04.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Dancing</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item creative portfolio">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/05.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Food & Drink/Cooking</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item corporate">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/06.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Outdoors & Adventure/Diving</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item creative portfolio">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/07.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Running</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
-            <div class="portfolio-item corporate">
-                <div class="portfolio-item-inner">
-                    <img class="img-responsive" src="Content/Images/portfolio/08.jpg" alt="">
-                    <div class="portfolio-info">
-                        <h3>Pets and Animals</h3>
-
-                        <a class="preview" href="images/portfolio/full.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i></a>
-                    </div>
-                </div>
-            </div><!--/.portfolio-item-->
+                </div><!--/.portfolio-item-->
+            }
         </div>
     </div><!--/.container-->
 </section><!--/#portfolio-->
@@ -171,93 +92,32 @@
             <p class="text-center wow fadeInDown">Our closest events. Interested? Hurry up! Join right now!</p>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
-                    <ul class="pricing">
-                        <li class="plan-header">
-                            <div class="price-duration">
-                                <span class="price">
-                                    Logo
-                                </span>
-                                @*<span class="duration">
+            @foreach (var item in Model.events)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <ul class="pricing">
+                            <li class="plan-header">
+                                <div class="price-duration">
+                                    <span class="price">
+                                        <img class="img-circle text-center" src=@item.logoImg style="width: 98px; height: 98px; margin-top: -31px;" />
+                                    </span>
+                                    @*<span class="duration">
 
-                                    </span>*@
-                            </div>
-                            <div class="plan-name">
-                                Event name
-                            </div>
-                        </li>
-                        <li><strong>Where</strong> </li>
-                        <li><strong>When</strong> </li>
-                        <li><strong>Avaliable</strong> </li>
-
-                        <li class="plan-purchase"><a class="btn btn-primary" href="#">JOIN NOW</a></li>
-                    </ul>
+                                        </span>*@
+                                </div>
+                                <div class="plan-name">
+                                    @item.name
+                                </div>
+                            </li>
+                            <li><strong> @item.where</strong> </li>
+                            <li><strong> @item.when</strong> </li>
+                            <li><strong> @item.available</strong> </li>
+                            <li class="plan-purchase"><a class="btn btn-primary" href="#">JOIN NOW</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="200ms">
-                    <ul class="pricing">
-                        <li class="plan-header">
-                            <div class="price-duration">
-                                <span class="price">
-                                    Logo
-                                </span>
-
-                            </div>
-                            <div class="plan-name">
-                                Event name
-                            </div>
-                        </li>
-                        <li><strong>Where</strong> </li>
-                        <li><strong>When</strong> </li>
-                        <li><strong>Avaliable</strong> </li>
-                        <li class="plan-purchase"><a class="btn btn-primary" href="#">JOIN NOW</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="400ms">
-                    <ul class="pricing">
-                        <li class="plan-header">
-                            <div class="price-duration">
-                                <span class="price">
-                                    Logo
-                                </span>
-
-                            </div>
-                            <div class="plan-name">
-                                Event name
-                            </div>
-                        </li>
-                        <li><strong>Where</strong> </li>
-                        <li><strong>When</strong> </li>
-                        <li><strong>Avaliable</strong> </li>
-                        <li class="plan-purchase"><a class="btn btn-primary" href="#">JOIN NOW</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="wow zoomIn" data-wow-duration="400ms" data-wow-delay="600ms">
-                    <ul class="pricing">
-                        <li class="plan-header">
-                            <div class="price-duration">
-                                <span class="price">
-                                    Logo
-                                </span>
-
-                            </div>
-                            <div class="plan-name">
-                                Event name
-                            </div>
-                        </li>
-                        <li><strong>Where</strong> </li>
-                        <li><strong>When</strong> </li>
-                        <li><strong>Avaliable</strong> </li>
-                        <li class="plan-purchase"><a class="btn btn-primary" href="#">ORDER NOW</a></li>
-                    </ul>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section><!--/#pricing-->
@@ -299,82 +159,30 @@
     <div class="container">
         <div class="section-header">
             <h2 class="section-title text-center wow fadeInDown">Groups</h2>
-            <p class="text-center wow fadeInDown">Not just an interest. MANY people + MANY interests</p>
+            <p class="text-center wow fadeInDown">Not just an interest. A lot of people + a lot of interests</p>
         </div>
         <div class="row">
             <div class="features">
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-line-chart"></i>
+                @foreach (var group in Model.groups)
+                {
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa">
+                                    <img class="img-circle text-center" src=@group.logoImg style=" width: 52px; height: 52px; margin-top: -4px; margin-left: 0px;" />
+                                </i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">@group.name</h4>
+                                <p>@group.description</p>
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group1</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-cubes"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group2</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-pie-chart"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group2</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-bar-chart"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group3</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-language"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group4</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
-                <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                    <div class="media service-box">
-                        <div class="pull-left">
-                            <i class="fa fa-bullseye"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Group5</h4>
-                            <p>Description</p>
-                        </div>
-                    </div>
-                </div><!--/.col-md-4-->
+                    </div><!--/.col-md-4-->
+                }
             </div>
         </div><!--/.row-->
     </div><!--/.container-->
 </section><!--/#services-->
-
 <section id="about">
     <div class="container">
         <div class="section-header">
