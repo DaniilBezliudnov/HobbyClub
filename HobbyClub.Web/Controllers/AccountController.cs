@@ -51,7 +51,7 @@ namespace Users.Controllers
         public ActionResult Logout()
         {
             AuthManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Main", "Home");
         }
         private IAuthenticationManager AuthManager
         {
