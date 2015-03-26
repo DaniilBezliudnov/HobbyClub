@@ -83,6 +83,7 @@
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Fake\Class1.cs" />
+    <Compile Include="Fake\FakeUserRepository.cs" />
     <Compile Include="Fake\IFakeRepository.cs" />
     <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
     <Compile Include="Infrastructure\Context\HobbyClubIdentityDbContext.cs" />
