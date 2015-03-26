@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HobbyClub.Data.Infrastructure
+namespace HobbyClub.Data.Abstract
 {
     public interface IBaseRepository<TEntity> where TEntity : class
     {
@@ -17,9 +17,9 @@ namespace HobbyClub.Data.Infrastructure
 
         TEntity Get(Expression<Func<TEntity, bool>> where);
 
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
 
-        IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
+        IQueryable<TEntity> GetMany(Expression<Func<TEntity, bool>> where);
 
         void Update(TEntity entity);
     }

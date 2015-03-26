@@ -13,7 +13,9 @@ namespace HobbyClub.Data.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreationDate { get; set; }
+        public virtual City City { get; set; }
         public virtual Logo Logo { get; set; }
+        public virtual ICollection<UserGroup> UserGroups { get; set; }
         public virtual ICollection<Interest> Interests { get; set; }
         public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<Event> Events { get; set; }

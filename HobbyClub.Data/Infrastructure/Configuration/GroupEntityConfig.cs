@@ -20,6 +20,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.HasMany(e => e.Events)
                 .WithOptional(e => e.Group)
                 .Map(e => e.MapKey("GroupId"));
+            this.HasOptional<City>(c => c.City)
+                .WithOptionalDependent()
+                .Map(c => c.MapKey("CityId"));
         }
     }
 }

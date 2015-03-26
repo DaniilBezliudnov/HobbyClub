@@ -23,6 +23,13 @@ namespace HobbyClub.Data.Infrastructure.Configuration
             this.Ignore(p => p.ID);
             this.Property(p => p.Email)
                 .IsRequired();
+            this.HasOptional<City>(c => c.City)
+                .WithOptionalDependent()
+                .Map(c => c.MapKey("CityId"));
+            this.HasMany<Event>(e => e.CreatedEvents)
+                .WithRequired(e => e.Creator)
+                .Map(e => e.MapKey("CreatorId"))
+                .WillCascadeOnDelete(false);
             this.HasMany<Event>(e => e.Events)
                 .WithMany(u => u.Users)
                 .Map(us =>
@@ -30,14 +37,6 @@ namespace HobbyClub.Data.Infrastructure.Configuration
                     us.MapLeftKey("UserId");
                     us.MapRightKey("EventId");
                     us.ToTable("UserEvent");
-                });
-            this.HasMany<Group>(u => u.Groups)
-                .WithMany(u => u.Users)
-                .Map(us =>
-                {
-                    us.MapLeftKey("UserId");
-                    us.MapRightKey("GroupId");
-                    us.ToTable("UserGroup");
                 });
             this.HasMany<Interest>(e => e.Interests)
                  .WithMany(u => u.Users)

@@ -10,6 +10,7 @@ namespace HobbyClub.Data.Entities
     public class Interest : IEntity
     {
         public Guid ID { get; set; }
+        public Interest ParentId { get; set; }
         public virtual Logo Logo { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
