@@ -1,35 +1,56 @@
-﻿@{
+﻿@model HobbyClub.Web.Models.EventViewModel
+
+@{
     //ViewBag.Title = "GetAllEvents";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>
 
-</h2>
-<div ng-app="eventsApp" class="container">
-    <div @*ng-controller="EventsController" *@ ng-init=" events =[{ name: 'Travel Meetup Event', location: 'L’viv', date: 'April 5 2015', peopleNeed: '10' },
-                { name: 'Poker tournament', location: 'Kyiv', date: 'March 29 2015', peopleNeed: '10' },
-                { name: 'Handmade Crafts', location: 'Ivano-Frankivsk', date: 'April 7 2015', peopleNeed: '10' },
-                { name: 'German Shepherds Practice Training Skills', location: 'Dnepropetrovsk', date: 'March 29 2015', peopleNeed: '10' }]">
-        <div class="row">
-         
-            <div class="col-sm-6 col-md-4" ng-repeat="ev in events">
+
+<div class="container">
+    <h2>Events</h2>
+    <div class="row">
+        @foreach (var item in Model.events)
+        {
+            <div class="col-sm-6 col-md-4" >
                 <div class="thumbnail">
-                    <img src="~/Content/Images/portfolio/01.jpg" alt="...">
+                    <img src=@item.logoImg style="width: 150px; height: 150px;">
                     <div class="caption">
-                        <h3>{{ev.name}}</h3>
-                        <p>{{ev.location}}</p>
-                        <p>{{ev.date}}</p>
-                        <p>{{ev.peopleNeed}}</p>
+                        <h3>@item.name</h3>
+                        <p>@item.where</p>
+                        <p>@item.when</p>
+                        <p>@item.available</p>
                         <p><a href="#" class="btn btn-primary" role="button">JOIN</a> </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@*@ *<div ng-app="eventsApp" class="container">
+        <div @*ng-controller="EventsController"  ng-init=" events =[{ name: 'Travel Meetup Event', location: 'L’viv', date: 'April 5 2015', peopleNeed: '10' },
+                    { name: 'Poker tournament', location: 'Kyiv', date: 'March 29 2015', peopleNeed: '10' },
+                    { name: 'Handmade Crafts', location: 'Ivano-Frankivsk', date: 'April 7 2015', peopleNeed: '10' },
+                    { name: 'German Shepherds Practice Training Skills', location: 'Dnepropetrovsk', date: 'March 29 2015', peopleNeed: '10' }]">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4" ng-repeat="ev in events">
+                    <div class="thumbnail">
+                        <img src="~/Content/Images/portfolio/01.jpg" alt="...">
+                        <div class="caption">
+                            <h3>{{ev.name}}</h3>
+                            <p>{{ev.location}}</p>
+                            <p>{{ev.date}}</p>
+                            <p>{{ev.peopleNeed}}</p>
+                            <p><a href="#" class="btn btn-primary" role="button">JOIN</a> </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<script src="/Scripts/app/events/controllers.js"></script>
-<script src="/Scripts/app/events/eventsService.js"></script>
-<script src="/Scripts/app/app.js"></script>
-
+    <script src="/Scripts/app/events/controllers.js"></script>
+    <script src="/Scripts/app/events/eventsService.js"></script>
+    <script src="/Scripts/app/app.js"></script>*@
