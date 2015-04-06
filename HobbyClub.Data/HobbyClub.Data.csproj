@@ -79,17 +79,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\AppRole.cs" />
-    <Compile Include="Entities\AppUser.cs" />
-    <Compile Include="Infrastructure\HobbyClubIdentityDbContext.cs" />
+    <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Entities\ChatLine.cs" />
+    <Compile Include="Entities\City.cs" />
+    <Compile Include="Entities\Country.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserGroup.cs" />
+    <Compile Include="Fake\Class1.cs" />
+    <Compile Include="Fake\FakeUserRepository.cs" />
+    <Compile Include="Fake\IFakeRepository.cs" />
+    <Compile Include="Infrastructure\Configuration\ChatLineConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\CityEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\CountryEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\IdentityRoleConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\UserGroupEntityConfig.cs" />
+    <Compile Include="Infrastructure\Context\HobbyClubIdentityDbContext.cs" />
     <Compile Include="Infrastructure\AppRoleManager.cs" />
     <Compile Include="Infrastructure\AppUserManager.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Infrastructure\Configuration\EventEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\GroupEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\InterestEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\LogoEntityConfig.cs" />
+    <Compile Include="Infrastructure\Configuration\IdentityUserEntityConfig.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\Interest.cs" />
+    <Compile Include="Entities\Logo.cs" />
+    <Compile Include="Concrete\GenericRepository.cs" />
+    <Compile Include="Abstract\IBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="Fake\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

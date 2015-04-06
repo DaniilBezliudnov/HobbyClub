@@ -9,29 +9,30 @@ using Microsoft.AspNet.Identity;
 namespace HobbyClub.Data.Migrations
 {
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HobbyClub.Data.Infrastructure.HobbyClubIdentityDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<HobbyClub.Data.Infrastructure.Context.HobbyClubIdentityDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(HobbyClub.Data.Infrastructure.HobbyClubIdentityDbContext context)
+        protected override void Seed(HobbyClub.Data.Infrastructure.Context.HobbyClubIdentityDbContext context)
         {
-            AppUserManager userMgr = new AppUserManager(new UserStore<AppUser>(context));
-            AppRoleManager roleMgr = new AppRoleManager(new RoleStore<AppRole>(context));
+            AppUserManager userMgr = new AppUserManager(new UserStore<User>(context));
+            AppRoleManager roleMgr = new AppRoleManager(new RoleStore<Role>(context));
             string roleName = "Admin";
             string userName = "Admin";
             string password = "Qwerty";
             string email = " admin@example.com ";
+
             if (!roleMgr.RoleExists(roleName))
             {
-                roleMgr.Create(new AppRole(roleName));
+                roleMgr.Create(new Role(roleName));
             }
-            AppUser user = userMgr.FindByName(userName);
+            IUser user = userMgr.FindByName(userName);
             if (user == null)
             {
-                userMgr.Create(new AppUser { UserName = userName, Email = email },
+                userMgr.Create(new User { UserName = userName, Email = email, SecondName= "Adminium", CreationDate=DateTime.Today },
                 password);
                 user = userMgr.FindByName(userName);
             }

@@ -3,6 +3,8 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 using HobbyClub.Data.Infrastructure;
+using HobbyClub.Data.Infrastructure.Context;
+
 namespace HobbyClub.Web
 {
     public class IdentityConfig

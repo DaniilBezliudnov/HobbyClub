@@ -25,7 +25,7 @@ namespace Users.Controllers
         public async Task<ActionResult> Create(CreateModel model) 
         {
             if (ModelState.IsValid) {
-            AppUser user = new AppUser {UserName = model.Name, Email = model.Email};
+            User user = new User {UserName = model.Name, Email = model.Email};
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
@@ -41,7 +41,7 @@ namespace Users.Controllers
         [HttpPost]
         public async Task<ActionResult> Delete(string id)
         {
-            AppUser user = await UserManager.FindByIdAsync(id);
+            User user = await UserManager.FindByIdAsync(id);
             if (user != null)
             {
                 IdentityResult result = await UserManager.DeleteAsync(user);
@@ -61,7 +61,7 @@ namespace Users.Controllers
         }
         public async Task<ActionResult> Edit(string id)
         {
-            AppUser user = await UserManager.FindByIdAsync(id);
+            User user = await UserManager.FindByIdAsync(id);
             if (user != null)
             {
                 return View(user);
@@ -74,7 +74,7 @@ namespace Users.Controllers
         [HttpPost]
         public async Task<ActionResult> Edit(string id, string email, string password)
         {
-            AppUser user = await UserManager.FindByIdAsync(id);
+            User user = await UserManager.FindByIdAsync(id);
             if (user != null)
             {
                 user.Email = email;
