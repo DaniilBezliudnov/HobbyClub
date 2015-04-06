@@ -3,7 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using HobbyClub.Data.Entities;
 using Microsoft.AspNet.Identity;
 using HobbyClub.Data.Infrastructure.Configuration;
-namespace HobbyClub.Data.Infrastructure
+namespace HobbyClub.Data.Infrastructure.Context
 {
     public class HobbyClubIdentityDbContext : IdentityDbContext<User>
     {

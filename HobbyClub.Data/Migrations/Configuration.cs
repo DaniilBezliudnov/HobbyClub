@@ -9,14 +9,14 @@ using Microsoft.AspNet.Identity;
 namespace HobbyClub.Data.Migrations
 {
 
-    internal sealed class Configuration : DbMigrationsConfiguration<HobbyClub.Data.Infrastructure.HobbyClubIdentityDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<HobbyClub.Data.Infrastructure.Context.HobbyClubIdentityDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(HobbyClub.Data.Infrastructure.HobbyClubIdentityDbContext context)
+        protected override void Seed(HobbyClub.Data.Infrastructure.Context.HobbyClubIdentityDbContext context)
         {
             AppUserManager userMgr = new AppUserManager(new UserStore<User>(context));
             AppRoleManager roleMgr = new AppRoleManager(new RoleStore<Role>(context));
