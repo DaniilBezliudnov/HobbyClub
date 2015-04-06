@@ -4,6 +4,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using HobbyClub.Data.Entities;
+using HobbyClub.Data.Infrastructure.Context;
+
 namespace HobbyClub.Data.Infrastructure
 {
     public class AppRoleManager : RoleManager<Role>, IDisposable
