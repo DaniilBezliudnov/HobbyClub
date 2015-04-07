@@ -62,7 +62,7 @@ namespace HobbyClub.Web
             routes.MapRoute(
                 name : "defaultRoute",
                 url : "{controller}/{action}",
-                defaults: new { controller = "controller", action = "action" }
+                defaults: new { controller = "controller", action = "Index" }// by default will always open Index method for any controller (action="action")
                 );
         }
     }
