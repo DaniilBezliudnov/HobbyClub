@@ -9,7 +9,8 @@ using HobbyClub.Data.Abstract;
 
 namespace HobbyClub.Data.Concrete
 {
-    public abstract class GenericRepository<TEntity, TContext> :
+    //abstract
+    public  class GenericRepository<TEntity, TContext> :
         IBaseRepository<TEntity>
         where TEntity : class
         where TContext : DbContext, new()
