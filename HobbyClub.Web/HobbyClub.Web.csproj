@@ -284,6 +284,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Authentication\" />
+    <Folder Include="Views\Event\Interest\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -332,7 +333,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Event\GetAllEvents.cshtml" />
-    <Content Include="Views\Event\Interest\GetAllInterests.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Interest\GetAllInterests.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

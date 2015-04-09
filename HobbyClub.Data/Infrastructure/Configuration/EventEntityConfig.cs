@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity.ModelConfiguration;
 using HobbyClub.Data.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HobbyClub.Data.Infrastructure.Configuration
 {
@@ -14,7 +15,8 @@ namespace HobbyClub.Data.Infrastructure.Configuration
         {
             this.ToTable("Event");
             this.HasKey<Guid>(p => p.ID);
-            this.Property(p=> p.ID).HasColumnName("EventId");
+            this.Property(p => p.ID).HasColumnName("EventId");
+            //this.Property(p=> p.ID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             this.Property(p => p.Name)
                 .IsRequired();
             this.Property(p => p.Description)
@@ -25,8 +27,9 @@ namespace HobbyClub.Data.Infrastructure.Configuration
                 .HasColumnType("datetime2")
                 .IsRequired();
             this.HasOptional<City>(c => c.City)
-                .WithOptionalDependent()
-                .Map(c => c.MapKey("CityId"));
+               //.WithMany()
+            .WithOptionalDependent()
+            .Map(c => c.MapKey("CityId"));
                             
         }
     }
