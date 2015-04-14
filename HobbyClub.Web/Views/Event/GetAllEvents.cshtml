@@ -1,11 +1,10 @@
 ﻿@*@model HobbyClub.Web.Models.EventViewModel*@
 @model IEnumerable<HobbyClub.Data.Entities.Event>
+
 @{
     //ViewBag.Title = "GetAllEvents";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
 
 <div class="container">
     <h2>Events</h2>
@@ -14,11 +13,11 @@
         {
             <div class="col-sm-6 col-md-4" >
                 <div class="thumbnail">
-                    <img src=@item.Logo style="width: 150px; height: 150px;">
+                    <img src=@item.Logo.Value style="width: 150px; height: 150px;">
                     <div class="caption">
                         <h3>@item.Name</h3>
                         <p>@item.Place</p>
-                        <p>@item.CreationDate</p>
+                        <p>@item.Time</p>
                         <p>@item.MaxPeople</p>
                         <p><a href="#" class="btn btn-primary" role="button">JOIN</a> </p>
                     </div>
