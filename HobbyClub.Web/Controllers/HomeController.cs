@@ -4,11 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HobbyClub.Data.Abstract;
+using HobbyClub.Data.Infrastructure;
+using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Web.Controllers
 {
     public class HomeController : Controller
     {
+
+        //private IBaseRepository<Event> repositoryEvent;
+        //private IBaseRepository<Group> repositoryGroup;
+        private IBaseRepository<Interest> repositoryInterest;
+        //private IBaseRepository<Logo> repositoryLogo;
+
+        public HomeController(//IBaseRepository<Event> eventRepository,IBaseRepository<Group> groupRepository,
+                              IBaseRepository<Interest> interestRepository)//, IBaseRepository<Logo> logoRepository)
+        {
+            //this.repositoryEvent = eventRepository;
+            //this.repositoryGroup = groupRepository;
+            this.repositoryInterest = interestRepository;
+            //this.repositoryLogo = logoRepository;
+        }
         public ActionResult Main()
         {
             #region заглушка
@@ -40,8 +57,12 @@ namespace HobbyClub.Web.Controllers
             events.Add(new EventsView() { logoImg = "/Content/Images/events/soccer_logo.png", name = "Soccer", where = "Kyive, Zhylianska Street", when = "26/03/2015", available = "2 free sits" });
             events.Add(new EventsView() { logoImg = "/Content/Images/events/vegan_logo.jpg", name = "Vegan club", where = "Kyive, Zhylianska Street", when = "26/03/2015", available = "2 free sits" });
             #endregion
+
+
+            var interest1 = repositoryInterest.GetAll().ToList();
             return View(new MainPageViewModel()
             {
+
                 slider = slider,
                 interests = interests,
                 events = events,

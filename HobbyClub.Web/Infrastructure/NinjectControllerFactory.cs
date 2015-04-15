@@ -34,6 +34,9 @@ namespace HobbyClub.Web.Infrastructure
         {
             // конфигурирование контейнера
             ninjectKernel.Bind<IBaseRepository<Event>>().To<GenericRepository<Event, HobbyClubIdentityDbContext>>().InSingletonScope();
+            ninjectKernel.Bind<IBaseRepository<Group>>().To<GenericRepository<Group, HobbyClubIdentityDbContext>>().InSingletonScope();
+            ninjectKernel.Bind<IBaseRepository<Interest>>().To<GenericRepository<Interest, HobbyClubIdentityDbContext>>().InSingletonScope();
+            ninjectKernel.Bind<IBaseRepository<Logo>>().To<GenericRepository<Logo, HobbyClubIdentityDbContext>>().InSingletonScope();
         }
     }
     

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using HobbyClub.Data.Entities;
 
 namespace HobbyClub.Web.Models
 {
@@ -32,6 +33,7 @@ namespace HobbyClub.Web.Models
     {
         public List<SliderView> slider { get; set; }
         public List<InterestsView> interests { get; set; }
+        //public List<Interest> interests { get; set; }
         public List<EventsView> events { get; set; }
         public List<GroupsView> groups { get; set; }
     }
